@@ -6,6 +6,11 @@
 #define LAB1_STACK_H
 #include <stdlib.h>
 #include <iostream>
+#include <random>
+# define BLUE "\e[34m"
+# define DEFAULT "\e[39m\e[0m"
+# define GREEN "\e[92m"
+# define RED  "\e[31m"
 
 typedef struct s_node {
     int     data;
@@ -25,7 +30,7 @@ void        push(t_stack *stack, int data);
 void        pop(t_stack *stack);
 void        clear(t_stack *stack);
 void        printAllStackData(t_stack *stack);
-
-
+void        pushRandomElements(t_stack *stack);
+void        moveElement(t_stack *stack, t_stack *additionalStack);
 
 #endif //LAB1_STACK_H

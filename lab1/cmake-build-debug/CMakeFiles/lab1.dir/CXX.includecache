@@ -11,6 +11,8 @@ stdlib.h
 -
 iostream
 -
+random
+-
 
 /home/tanzilya/Data-structures-and-algorithms/lab1/main.cpp
 iostream
