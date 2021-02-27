@@ -6,17 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/tanzilya/Data-structures-and-algorithms/lab1/Stack.h
+/Users/welease/Data-structures-and-algorithms/lab1/Stack.cpp
+Stack.h
+/Users/welease/Data-structures-and-algorithms/lab1/Stack.h
+
+/Users/welease/Data-structures-and-algorithms/lab1/Stack.h
 stdlib.h
 -
 iostream
 -
 random
 -
-
-/home/tanzilya/Data-structures-and-algorithms/lab1/main.cpp
-iostream
--
-Stack.h
-/home/tanzilya/Data-structures-and-algorithms/lab1/Stack.h
 

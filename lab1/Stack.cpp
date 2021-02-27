@@ -76,10 +76,18 @@ int getRandomNumber(int min, int max) {
 
 void pushRandomElements(t_stack *stack) {
     int n;
+    std::string input;
     std::cout << "Enter number of random elements: ";
-    std::cin >> n;
+    std::cin >> input;
+    try {
+		n = std::stoi(input);
+	}
+    catch (std::exception & ex){
+    	std::cout << RED << "Wrong input :(" << DEFAULT << std::endl;
+    	return;
+    }
     while (n--)
-        push(stack, getRandomNumber(0, 2147483646));
+        push(stack, getRandomNumber(0, 500));
 }
 
 void moveElement(t_stack *stack, t_stack *additionalStack) {

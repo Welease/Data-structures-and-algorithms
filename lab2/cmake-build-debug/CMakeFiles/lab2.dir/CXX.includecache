@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/welease/Data-structures-and-algorithms/lab2/Queue.cpp
+Queue.h
+/Users/welease/Data-structures-and-algorithms/lab2/Queue.h
+
+/Users/welease/Data-structures-and-algorithms/lab2/Queue.h
+iostream
+-
+
