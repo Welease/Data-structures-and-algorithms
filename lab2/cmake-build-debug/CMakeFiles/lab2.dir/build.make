@@ -54,19 +54,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /home/tanzilya/Downloads/clion-2020.3.1/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /home/tanzilya/Downloads/clion-2020.3.1/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/welease/Data-structures-and-algorithms/lab2
+CMAKE_SOURCE_DIR = /home/tanzilya/Data-structures-and-algorithms/lab2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/welease/Data-structures-and-algorithms/lab2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/tanzilya/Data-structures-and-algorithms/lab2/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/lab2.dir/depend.make
@@ -79,29 +79,29 @@ include CMakeFiles/lab2.dir/flags.make
 
 CMakeFiles/lab2.dir/main.cpp.o: CMakeFiles/lab2.dir/flags.make
 CMakeFiles/lab2.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/welease/Data-structures-and-algorithms/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab2.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab2.dir/main.cpp.o -c /Users/welease/Data-structures-and-algorithms/lab2/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tanzilya/Data-structures-and-algorithms/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab2.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab2.dir/main.cpp.o -c /home/tanzilya/Data-structures-and-algorithms/lab2/main.cpp
 
 CMakeFiles/lab2.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab2.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/welease/Data-structures-and-algorithms/lab2/main.cpp > CMakeFiles/lab2.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tanzilya/Data-structures-and-algorithms/lab2/main.cpp > CMakeFiles/lab2.dir/main.cpp.i
 
 CMakeFiles/lab2.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab2.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/welease/Data-structures-and-algorithms/lab2/main.cpp -o CMakeFiles/lab2.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tanzilya/Data-structures-and-algorithms/lab2/main.cpp -o CMakeFiles/lab2.dir/main.cpp.s
 
 CMakeFiles/lab2.dir/Queue.cpp.o: CMakeFiles/lab2.dir/flags.make
 CMakeFiles/lab2.dir/Queue.cpp.o: ../Queue.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/welease/Data-structures-and-algorithms/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lab2.dir/Queue.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab2.dir/Queue.cpp.o -c /Users/welease/Data-structures-and-algorithms/lab2/Queue.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tanzilya/Data-structures-and-algorithms/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lab2.dir/Queue.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab2.dir/Queue.cpp.o -c /home/tanzilya/Data-structures-and-algorithms/lab2/Queue.cpp
 
 CMakeFiles/lab2.dir/Queue.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab2.dir/Queue.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/welease/Data-structures-and-algorithms/lab2/Queue.cpp > CMakeFiles/lab2.dir/Queue.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tanzilya/Data-structures-and-algorithms/lab2/Queue.cpp > CMakeFiles/lab2.dir/Queue.cpp.i
 
 CMakeFiles/lab2.dir/Queue.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab2.dir/Queue.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/welease/Data-structures-and-algorithms/lab2/Queue.cpp -o CMakeFiles/lab2.dir/Queue.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tanzilya/Data-structures-and-algorithms/lab2/Queue.cpp -o CMakeFiles/lab2.dir/Queue.cpp.s
 
 # Object files for target lab2
 lab2_OBJECTS = \
@@ -115,7 +115,7 @@ lab2: CMakeFiles/lab2.dir/main.cpp.o
 lab2: CMakeFiles/lab2.dir/Queue.cpp.o
 lab2: CMakeFiles/lab2.dir/build.make
 lab2: CMakeFiles/lab2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/welease/Data-structures-and-algorithms/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable lab2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tanzilya/Data-structures-and-algorithms/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable lab2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lab2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -128,6 +128,6 @@ CMakeFiles/lab2.dir/clean:
 .PHONY : CMakeFiles/lab2.dir/clean
 
 CMakeFiles/lab2.dir/depend:
-	cd /Users/welease/Data-structures-and-algorithms/lab2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/welease/Data-structures-and-algorithms/lab2 /Users/welease/Data-structures-and-algorithms/lab2 /Users/welease/Data-structures-and-algorithms/lab2/cmake-build-debug /Users/welease/Data-structures-and-algorithms/lab2/cmake-build-debug /Users/welease/Data-structures-and-algorithms/lab2/cmake-build-debug/CMakeFiles/lab2.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tanzilya/Data-structures-and-algorithms/lab2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tanzilya/Data-structures-and-algorithms/lab2 /home/tanzilya/Data-structures-and-algorithms/lab2 /home/tanzilya/Data-structures-and-algorithms/lab2/cmake-build-debug /home/tanzilya/Data-structures-and-algorithms/lab2/cmake-build-debug /home/tanzilya/Data-structures-and-algorithms/lab2/cmake-build-debug/CMakeFiles/lab2.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/lab2.dir/depend
 

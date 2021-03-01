@@ -10,7 +10,7 @@ int main() {
 				  "2 - check full queue or not\n" <<
 				  "3 - push new element to queue\n" <<
 				  "4 - pop element from queue\n" <<
-				  "5 - print all data from stack\n" <<
+				  "5 - print all data from queue\n" <<
 				  "6 - exist\n====>" << DEFAULT << std::endl;
 		std::cin >> input;
 		if (input == "1")

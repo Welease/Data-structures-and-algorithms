@@ -17,6 +17,7 @@ typedef struct	s_queue {
 	int queue[SIZE];
 	int begin;
 	int end;
+	int count;
 }				t_queue;
 
 t_queue		*getQueue();

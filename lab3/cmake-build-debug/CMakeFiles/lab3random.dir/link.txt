@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/lab3random.dir/main3lab.cpp.o CMakeFiles/lab3random.dir/DinamicQueue.cpp.o  -o lab3random 

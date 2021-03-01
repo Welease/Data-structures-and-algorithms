@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/lab4_string.dir/main2.cpp.o  -o lab4_string 

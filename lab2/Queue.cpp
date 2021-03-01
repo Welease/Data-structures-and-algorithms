@@ -8,6 +8,7 @@ t_queue *getQueue(){
 	auto * queue = new t_queue;
 	queue->begin = -1;
 	queue->end = -1;
+	queue->count = 0;
 	return queue;
 }
 
@@ -30,6 +31,8 @@ void push(t_queue *queue, int data) {
 		queue->end = (queue->end + 1) % SIZE;
 		queue->queue[queue->end] = data;
 	}
+	queue->count++;
+    std::cout << GREEN << "Element successfully pushed!" << DEFAULT << std::endl;
 }
 
 int pop(t_queue *queue) {
@@ -47,7 +50,9 @@ int pop(t_queue *queue) {
 		}
 		else
 			queue->begin = (queue->begin + 1) % SIZE;
+		queue->count--;
 	}
+    std::cout << GREEN << "Element successfully deleted!" << DEFAULT << std::endl;
 	return temp;
 }
 
@@ -67,4 +72,8 @@ void printQueuesData(t_queue *queue) {
 
 void clear(t_queue *queue) {
 	delete queue;
+}
+
+int getSize(t_queue *queue) {
+    return queue->count;
 }

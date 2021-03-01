@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tanzilya/Data-structures-and-algorithms/lab3/DinamicQueue.h
+iostream
+-
+
+/home/tanzilya/Data-structures-and-algorithms/lab3/main3lab.cpp
+DinamicQueue.h
+/home/tanzilya/Data-structures-and-algorithms/lab3/DinamicQueue.h
+

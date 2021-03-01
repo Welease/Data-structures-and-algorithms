@@ -1,0 +1,4 @@
+/home/tanzilya/Data-structures-and-algorithms/lab4/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/tanzilya/Data-structures-and-algorithms/lab4/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/tanzilya/Data-structures-and-algorithms/lab4/cmake-build-debug/CMakeFiles/lab4_string.dir
+/home/tanzilya/Data-structures-and-algorithms/lab4/cmake-build-debug/CMakeFiles/lab4.dir
