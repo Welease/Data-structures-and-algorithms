@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tanzilya/Data-structures-and-algorithms/lab6/DynamicList.cpp
+DynamicList.h
+/home/tanzilya/Data-structures-and-algorithms/lab6/DynamicList.h
+
+/home/tanzilya/Data-structures-and-algorithms/lab6/DynamicList.h
+iostream
+-
+cstring
+-
+

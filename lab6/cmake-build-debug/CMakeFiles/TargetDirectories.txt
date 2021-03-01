@@ -1,0 +1,3 @@
+/home/tanzilya/Data-structures-and-algorithms/lab6/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/tanzilya/Data-structures-and-algorithms/lab6/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/tanzilya/Data-structures-and-algorithms/lab6/cmake-build-debug/CMakeFiles/lab6.dir

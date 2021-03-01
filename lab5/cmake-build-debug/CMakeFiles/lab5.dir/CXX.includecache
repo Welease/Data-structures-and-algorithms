@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tanzilya/Data-structures-and-algorithms/lab5/ListOnArray.h
+iostream
+-
+cstring
+-
+
+/home/tanzilya/Data-structures-and-algorithms/lab5/main.cpp
+iostream
+-
+ListOnArray.h
+/home/tanzilya/Data-structures-and-algorithms/lab5/ListOnArray.h
+

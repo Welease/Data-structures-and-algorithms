@@ -1,0 +1,4 @@
+/home/tanzilya/Downloads/clion-2020.3.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/tanzilya/Data-structures-and-algorithms/lab5
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/tanzilya/Data-structures-and-algorithms/lab5/cmake-build-debug
