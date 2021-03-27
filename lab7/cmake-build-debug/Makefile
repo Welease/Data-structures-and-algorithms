@@ -144,6 +144,19 @@ lab8/fast:
 .PHONY : lab8/fast
 
 #=============================================================================
+# Target rules for targets named lab9
+
+# Build rule for target.
+lab9: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab9
+.PHONY : lab9
+
+# fast build rule for target.
+lab9/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab9.dir/build.make CMakeFiles/lab9.dir/build
+.PHONY : lab9/fast
+
+#=============================================================================
 # Target rules for targets named lab7
 
 # Build rule for target.
@@ -183,6 +196,33 @@ Users/welease/Data-structures-and-algorithms/lab8/lab8.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab8.dir/build.make CMakeFiles/lab8.dir/Users/welease/Data-structures-and-algorithms/lab8/lab8.cpp.s
 .PHONY : Users/welease/Data-structures-and-algorithms/lab8/lab8.cpp.s
 
+Users/welease/Data-structures-and-algorithms/lab9/lab9.o: Users/welease/Data-structures-and-algorithms/lab9/lab9.cpp.o
+
+.PHONY : Users/welease/Data-structures-and-algorithms/lab9/lab9.o
+
+# target to build an object file
+Users/welease/Data-structures-and-algorithms/lab9/lab9.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab9.dir/build.make CMakeFiles/lab9.dir/Users/welease/Data-structures-and-algorithms/lab9/lab9.cpp.o
+.PHONY : Users/welease/Data-structures-and-algorithms/lab9/lab9.cpp.o
+
+Users/welease/Data-structures-and-algorithms/lab9/lab9.i: Users/welease/Data-structures-and-algorithms/lab9/lab9.cpp.i
+
+.PHONY : Users/welease/Data-structures-and-algorithms/lab9/lab9.i
+
+# target to preprocess a source file
+Users/welease/Data-structures-and-algorithms/lab9/lab9.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab9.dir/build.make CMakeFiles/lab9.dir/Users/welease/Data-structures-and-algorithms/lab9/lab9.cpp.i
+.PHONY : Users/welease/Data-structures-and-algorithms/lab9/lab9.cpp.i
+
+Users/welease/Data-structures-and-algorithms/lab9/lab9.s: Users/welease/Data-structures-and-algorithms/lab9/lab9.cpp.s
+
+.PHONY : Users/welease/Data-structures-and-algorithms/lab9/lab9.s
+
+# target to generate assembly for a file
+Users/welease/Data-structures-and-algorithms/lab9/lab9.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab9.dir/build.make CMakeFiles/lab9.dir/Users/welease/Data-structures-and-algorithms/lab9/lab9.cpp.s
+.PHONY : Users/welease/Data-structures-and-algorithms/lab9/lab9.cpp.s
+
 lab7.o: lab7.cpp.o
 
 .PHONY : lab7.o
@@ -220,9 +260,13 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... lab7"
 	@echo "... lab8"
+	@echo "... lab9"
 	@echo "... Users/welease/Data-structures-and-algorithms/lab8/lab8.o"
 	@echo "... Users/welease/Data-structures-and-algorithms/lab8/lab8.i"
 	@echo "... Users/welease/Data-structures-and-algorithms/lab8/lab8.s"
+	@echo "... Users/welease/Data-structures-and-algorithms/lab9/lab9.o"
+	@echo "... Users/welease/Data-structures-and-algorithms/lab9/lab9.i"
+	@echo "... Users/welease/Data-structures-and-algorithms/lab9/lab9.s"
 	@echo "... lab7.o"
 	@echo "... lab7.i"
 	@echo "... lab7.s"

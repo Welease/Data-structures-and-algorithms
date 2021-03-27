@@ -74,6 +74,7 @@ CMAKE_BINARY_DIR = /Users/welease/Data-structures-and-algorithms/lab7/cmake-buil
 
 # The main recursive "all" target.
 all: CMakeFiles/lab8.dir/all
+all: CMakeFiles/lab9.dir/all
 all: CMakeFiles/lab7.dir/all
 
 .PHONY : all
@@ -85,6 +86,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/lab8.dir/clean
+clean: CMakeFiles/lab9.dir/clean
 clean: CMakeFiles/lab7.dir/clean
 
 .PHONY : clean
@@ -115,6 +117,33 @@ lab8: CMakeFiles/lab8.dir/rule
 CMakeFiles/lab8.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab8.dir/build.make CMakeFiles/lab8.dir/clean
 .PHONY : CMakeFiles/lab8.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/lab9.dir
+
+# All Build rule for target.
+CMakeFiles/lab9.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab9.dir/build.make CMakeFiles/lab9.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab9.dir/build.make CMakeFiles/lab9.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/welease/Data-structures-and-algorithms/lab7/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target lab9"
+.PHONY : CMakeFiles/lab9.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/lab9.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/welease/Data-structures-and-algorithms/lab7/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lab9.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/welease/Data-structures-and-algorithms/lab7/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/lab9.dir/rule
+
+# Convenience name for target.
+lab9: CMakeFiles/lab9.dir/rule
+
+.PHONY : lab9
+
+# clean rule for target.
+CMakeFiles/lab9.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab9.dir/build.make CMakeFiles/lab9.dir/clean
+.PHONY : CMakeFiles/lab9.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/lab7.dir
