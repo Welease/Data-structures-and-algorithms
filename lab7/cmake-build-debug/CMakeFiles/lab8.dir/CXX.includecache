@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/welease/Data-structures-and-algorithms/lab8/ft_list.h
+iostream
+-
+memory
+-
+
+/Users/welease/Data-structures-and-algorithms/lab8/lab8.cpp
+ft_list.h
+/Users/welease/Data-structures-and-algorithms/lab8/ft_list.h
+

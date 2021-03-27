@@ -157,7 +157,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=lab7
+CMAKE_PROJECT_NAME:STATIC=lab6
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib
@@ -229,12 +229,6 @@ lab6_BINARY_DIR:STATIC=/Users/welease/Data-structures-and-algorithms/lab7/cmake-
 
 //Value Computed by CMake
 lab6_SOURCE_DIR:STATIC=/Users/welease/Data-structures-and-algorithms/lab7
-
-//Value Computed by CMake
-lab7_BINARY_DIR:STATIC=/Users/welease/Data-structures-and-algorithms/lab7/cmake-build-debug
-
-//Value Computed by CMake
-lab7_SOURCE_DIR:STATIC=/Users/welease/Data-structures-and-algorithms/lab7
 
 
 ########################
