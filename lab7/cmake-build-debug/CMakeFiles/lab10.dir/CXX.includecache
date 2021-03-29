@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/welease/Data-structures-and-algorithms/lab10/Stack.h
+stdlib.h
+-
+iostream
+-
+random
+-
+Tree.h
+/Users/welease/Data-structures-and-algorithms/lab10/Tree.h
+
+/Users/welease/Data-structures-and-algorithms/lab10/Tree.h
+
+/Users/welease/Data-structures-and-algorithms/lab10/lab10.cpp
+iostream
+-
+fstream
+-
+fcntl.h
+-
+Tree.h
+/Users/welease/Data-structures-and-algorithms/lab10/Tree.h
+Stack.h
+/Users/welease/Data-structures-and-algorithms/lab10/Stack.h
+

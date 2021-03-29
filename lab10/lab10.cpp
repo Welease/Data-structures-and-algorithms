@@ -5,6 +5,7 @@
 #include <fstream>
 #include <fcntl.h>
 #include "Tree.h"
+#include "Stack.h"
 
 int getRandomNumber(int min, int max) {
 	static const double fraction = 1.0 / (static_cast<double>(RAND_MAX) + 1.0);
@@ -38,6 +39,28 @@ void clear(TreeNode *root) {
 		delete root;
 		clear(left);
 		clear(right);
+	}
+}
+
+void printIterInSym(TreeNode *root) {
+	t_stack *stack = getNewStack();
+	TreeNode *t;
+	int l = -1;
+	while (stack->size != 0 || root != NULL) {
+		if (root != NULL) {
+			push(stack, root, ++l);
+			root = root->left;
+		} else {
+			t = stack->top->node;
+			l = stack->top->l;
+			pop(stack);
+			root = t;
+			for (int i = 1; i <= l; ++i) {
+				std::cout << "     ";
+			}
+			std::cout << root->key << std::endl;
+			root = root->right;
+		}
 	}
 }
 
@@ -85,7 +108,8 @@ int main() {
 				  "2 - print in straight order\n" <<
 				  "3 - print in symmetrical order\n" <<
 				  "4 - print in reverse symmetrical order\n" <<
-				  "5 - exit\n====>" << DEFAULT << std::endl;
+				  "5 - print ITER in symmetrical order\n" <<
+				  "6 - exit\n====>" << DEFAULT << std::endl;
 		std::cin >> input;
 		if (input == "1") {
 			std::cout << "Input count of nodes:";
@@ -107,7 +131,11 @@ int main() {
 			std::cout << "in reverse symmetrical order" << std::endl;
 			printReversSym(root, 0);
 		}
-		else if (input == "5")
+		else if (input == "5") {
+			std::cout << "in straight symmetrical order by ITER method:" << std::endl;
+			printIterInSym(root);
+		}
+		else if (input == "6")
 			exit(0);
 		else
 			std::cout << RED << "Incorrect command:(" << DEFAULT << std::endl;

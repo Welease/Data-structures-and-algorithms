@@ -131,19 +131,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named lab8
-
-# Build rule for target.
-lab8: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab8
-.PHONY : lab8
-
-# fast build rule for target.
-lab8/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab8.dir/build.make CMakeFiles/lab8.dir/build
-.PHONY : lab8/fast
-
-#=============================================================================
 # Target rules for targets named lab9
 
 # Build rule for target.
@@ -168,6 +155,86 @@ lab7: cmake_check_build_system
 lab7/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab7.dir/build.make CMakeFiles/lab7.dir/build
 .PHONY : lab7/fast
+
+#=============================================================================
+# Target rules for targets named lab10
+
+# Build rule for target.
+lab10: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab10
+.PHONY : lab10
+
+# fast build rule for target.
+lab10/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/build
+.PHONY : lab10/fast
+
+#=============================================================================
+# Target rules for targets named lab8
+
+# Build rule for target.
+lab8: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab8
+.PHONY : lab8
+
+# fast build rule for target.
+lab8/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab8.dir/build.make CMakeFiles/lab8.dir/build
+.PHONY : lab8/fast
+
+Users/welease/Data-structures-and-algorithms/lab10/Stack.o: Users/welease/Data-structures-and-algorithms/lab10/Stack.cpp.o
+
+.PHONY : Users/welease/Data-structures-and-algorithms/lab10/Stack.o
+
+# target to build an object file
+Users/welease/Data-structures-and-algorithms/lab10/Stack.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/Users/welease/Data-structures-and-algorithms/lab10/Stack.cpp.o
+.PHONY : Users/welease/Data-structures-and-algorithms/lab10/Stack.cpp.o
+
+Users/welease/Data-structures-and-algorithms/lab10/Stack.i: Users/welease/Data-structures-and-algorithms/lab10/Stack.cpp.i
+
+.PHONY : Users/welease/Data-structures-and-algorithms/lab10/Stack.i
+
+# target to preprocess a source file
+Users/welease/Data-structures-and-algorithms/lab10/Stack.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/Users/welease/Data-structures-and-algorithms/lab10/Stack.cpp.i
+.PHONY : Users/welease/Data-structures-and-algorithms/lab10/Stack.cpp.i
+
+Users/welease/Data-structures-and-algorithms/lab10/Stack.s: Users/welease/Data-structures-and-algorithms/lab10/Stack.cpp.s
+
+.PHONY : Users/welease/Data-structures-and-algorithms/lab10/Stack.s
+
+# target to generate assembly for a file
+Users/welease/Data-structures-and-algorithms/lab10/Stack.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/Users/welease/Data-structures-and-algorithms/lab10/Stack.cpp.s
+.PHONY : Users/welease/Data-structures-and-algorithms/lab10/Stack.cpp.s
+
+Users/welease/Data-structures-and-algorithms/lab10/lab10.o: Users/welease/Data-structures-and-algorithms/lab10/lab10.cpp.o
+
+.PHONY : Users/welease/Data-structures-and-algorithms/lab10/lab10.o
+
+# target to build an object file
+Users/welease/Data-structures-and-algorithms/lab10/lab10.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/Users/welease/Data-structures-and-algorithms/lab10/lab10.cpp.o
+.PHONY : Users/welease/Data-structures-and-algorithms/lab10/lab10.cpp.o
+
+Users/welease/Data-structures-and-algorithms/lab10/lab10.i: Users/welease/Data-structures-and-algorithms/lab10/lab10.cpp.i
+
+.PHONY : Users/welease/Data-structures-and-algorithms/lab10/lab10.i
+
+# target to preprocess a source file
+Users/welease/Data-structures-and-algorithms/lab10/lab10.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/Users/welease/Data-structures-and-algorithms/lab10/lab10.cpp.i
+.PHONY : Users/welease/Data-structures-and-algorithms/lab10/lab10.cpp.i
+
+Users/welease/Data-structures-and-algorithms/lab10/lab10.s: Users/welease/Data-structures-and-algorithms/lab10/lab10.cpp.s
+
+.PHONY : Users/welease/Data-structures-and-algorithms/lab10/lab10.s
+
+# target to generate assembly for a file
+Users/welease/Data-structures-and-algorithms/lab10/lab10.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/Users/welease/Data-structures-and-algorithms/lab10/lab10.cpp.s
+.PHONY : Users/welease/Data-structures-and-algorithms/lab10/lab10.cpp.s
 
 Users/welease/Data-structures-and-algorithms/lab8/lab8.o: Users/welease/Data-structures-and-algorithms/lab8/lab8.cpp.o
 
@@ -258,9 +325,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... lab10"
 	@echo "... lab7"
 	@echo "... lab8"
 	@echo "... lab9"
+	@echo "... Users/welease/Data-structures-and-algorithms/lab10/Stack.o"
+	@echo "... Users/welease/Data-structures-and-algorithms/lab10/Stack.i"
+	@echo "... Users/welease/Data-structures-and-algorithms/lab10/Stack.s"
+	@echo "... Users/welease/Data-structures-and-algorithms/lab10/lab10.o"
+	@echo "... Users/welease/Data-structures-and-algorithms/lab10/lab10.i"
+	@echo "... Users/welease/Data-structures-and-algorithms/lab10/lab10.s"
 	@echo "... Users/welease/Data-structures-and-algorithms/lab8/lab8.o"
 	@echo "... Users/welease/Data-structures-and-algorithms/lab8/lab8.i"
 	@echo "... Users/welease/Data-structures-and-algorithms/lab8/lab8.s"
