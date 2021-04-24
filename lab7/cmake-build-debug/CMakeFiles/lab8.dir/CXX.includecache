@@ -6,13 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/Users/welease/Data-structures-and-algorithms/lab8/ft_list.h
+/home/tanzilya/Data-structures-and-algorithms/lab8/listOfLIsts.h
 iostream
 -
-memory
+cstdlib
 -
 
-/Users/welease/Data-structures-and-algorithms/lab8/lab8.cpp
-ft_list.h
-/Users/welease/Data-structures-and-algorithms/lab8/ft_list.h
+/home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.cpp
+listOfLIsts.h
+/home/tanzilya/Data-structures-and-algorithms/lab8/listOfLIsts.h
+
+/home/tanzilya/Data-structures-and-algorithms/lab8/main8.cpp
+listOfLIsts.h
+/home/tanzilya/Data-structures-and-algorithms/lab8/listOfLIsts.h
 

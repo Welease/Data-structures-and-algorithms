@@ -59,19 +59,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /home/tanzilya/Downloads/clion-2020.3.1/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /home/tanzilya/Downloads/clion-2020.3.1/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/welease/Data-structures-and-algorithms/lab7
+CMAKE_SOURCE_DIR = /home/tanzilya/Data-structures-and-algorithms/lab7
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/welease/Data-structures-and-algorithms/lab7/cmake-build-debug
+CMAKE_BINARY_DIR = /home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,7 +79,7 @@ CMAKE_BINARY_DIR = /Users/welease/Data-structures-and-algorithms/lab7/cmake-buil
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/tanzilya/Downloads/clion-2020.3.1/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -90,7 +90,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/tanzilya/Downloads/clion-2020.3.1/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/welease/Data-structures-and-algorithms/lab7/cmake-build-debug/CMakeFiles /Users/welease/Data-structures-and-algorithms/lab7/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/CMakeFiles /home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/welease/Data-structures-and-algorithms/lab7/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -131,19 +131,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named lab9
-
-# Build rule for target.
-lab9: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab9
-.PHONY : lab9
-
-# fast build rule for target.
-lab9/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab9.dir/build.make CMakeFiles/lab9.dir/build
-.PHONY : lab9/fast
-
-#=============================================================================
 # Target rules for targets named lab7
 
 # Build rule for target.
@@ -155,19 +142,6 @@ lab7: cmake_check_build_system
 lab7/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab7.dir/build.make CMakeFiles/lab7.dir/build
 .PHONY : lab7/fast
-
-#=============================================================================
-# Target rules for targets named lab10
-
-# Build rule for target.
-lab10: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab10
-.PHONY : lab10
-
-# fast build rule for target.
-lab10/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/build
-.PHONY : lab10/fast
 
 #=============================================================================
 # Target rules for targets named lab8
@@ -182,113 +156,166 @@ lab8/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab8.dir/build.make CMakeFiles/lab8.dir/build
 .PHONY : lab8/fast
 
-Users/welease/Data-structures-and-algorithms/lab10/Stack.o: Users/welease/Data-structures-and-algorithms/lab10/Stack.cpp.o
+#=============================================================================
+# Target rules for targets named lab9
 
-.PHONY : Users/welease/Data-structures-and-algorithms/lab10/Stack.o
+# Build rule for target.
+lab9: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab9
+.PHONY : lab9
 
-# target to build an object file
-Users/welease/Data-structures-and-algorithms/lab10/Stack.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/Users/welease/Data-structures-and-algorithms/lab10/Stack.cpp.o
-.PHONY : Users/welease/Data-structures-and-algorithms/lab10/Stack.cpp.o
+# fast build rule for target.
+lab9/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab9.dir/build.make CMakeFiles/lab9.dir/build
+.PHONY : lab9/fast
 
-Users/welease/Data-structures-and-algorithms/lab10/Stack.i: Users/welease/Data-structures-and-algorithms/lab10/Stack.cpp.i
+#=============================================================================
+# Target rules for targets named lab10
 
-.PHONY : Users/welease/Data-structures-and-algorithms/lab10/Stack.i
+# Build rule for target.
+lab10: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab10
+.PHONY : lab10
 
-# target to preprocess a source file
-Users/welease/Data-structures-and-algorithms/lab10/Stack.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/Users/welease/Data-structures-and-algorithms/lab10/Stack.cpp.i
-.PHONY : Users/welease/Data-structures-and-algorithms/lab10/Stack.cpp.i
+# fast build rule for target.
+lab10/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/build
+.PHONY : lab10/fast
 
-Users/welease/Data-structures-and-algorithms/lab10/Stack.s: Users/welease/Data-structures-and-algorithms/lab10/Stack.cpp.s
+home/tanzilya/Data-structures-and-algorithms/lab10/Stack.o: home/tanzilya/Data-structures-and-algorithms/lab10/Stack.cpp.o
 
-.PHONY : Users/welease/Data-structures-and-algorithms/lab10/Stack.s
-
-# target to generate assembly for a file
-Users/welease/Data-structures-and-algorithms/lab10/Stack.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/Users/welease/Data-structures-and-algorithms/lab10/Stack.cpp.s
-.PHONY : Users/welease/Data-structures-and-algorithms/lab10/Stack.cpp.s
-
-Users/welease/Data-structures-and-algorithms/lab10/lab10.o: Users/welease/Data-structures-and-algorithms/lab10/lab10.cpp.o
-
-.PHONY : Users/welease/Data-structures-and-algorithms/lab10/lab10.o
-
-# target to build an object file
-Users/welease/Data-structures-and-algorithms/lab10/lab10.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/Users/welease/Data-structures-and-algorithms/lab10/lab10.cpp.o
-.PHONY : Users/welease/Data-structures-and-algorithms/lab10/lab10.cpp.o
-
-Users/welease/Data-structures-and-algorithms/lab10/lab10.i: Users/welease/Data-structures-and-algorithms/lab10/lab10.cpp.i
-
-.PHONY : Users/welease/Data-structures-and-algorithms/lab10/lab10.i
-
-# target to preprocess a source file
-Users/welease/Data-structures-and-algorithms/lab10/lab10.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/Users/welease/Data-structures-and-algorithms/lab10/lab10.cpp.i
-.PHONY : Users/welease/Data-structures-and-algorithms/lab10/lab10.cpp.i
-
-Users/welease/Data-structures-and-algorithms/lab10/lab10.s: Users/welease/Data-structures-and-algorithms/lab10/lab10.cpp.s
-
-.PHONY : Users/welease/Data-structures-and-algorithms/lab10/lab10.s
-
-# target to generate assembly for a file
-Users/welease/Data-structures-and-algorithms/lab10/lab10.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/Users/welease/Data-structures-and-algorithms/lab10/lab10.cpp.s
-.PHONY : Users/welease/Data-structures-and-algorithms/lab10/lab10.cpp.s
-
-Users/welease/Data-structures-and-algorithms/lab8/lab8.o: Users/welease/Data-structures-and-algorithms/lab8/lab8.cpp.o
-
-.PHONY : Users/welease/Data-structures-and-algorithms/lab8/lab8.o
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab10/Stack.o
 
 # target to build an object file
-Users/welease/Data-structures-and-algorithms/lab8/lab8.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab8.dir/build.make CMakeFiles/lab8.dir/Users/welease/Data-structures-and-algorithms/lab8/lab8.cpp.o
-.PHONY : Users/welease/Data-structures-and-algorithms/lab8/lab8.cpp.o
+home/tanzilya/Data-structures-and-algorithms/lab10/Stack.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/home/tanzilya/Data-structures-and-algorithms/lab10/Stack.cpp.o
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab10/Stack.cpp.o
 
-Users/welease/Data-structures-and-algorithms/lab8/lab8.i: Users/welease/Data-structures-and-algorithms/lab8/lab8.cpp.i
+home/tanzilya/Data-structures-and-algorithms/lab10/Stack.i: home/tanzilya/Data-structures-and-algorithms/lab10/Stack.cpp.i
 
-.PHONY : Users/welease/Data-structures-and-algorithms/lab8/lab8.i
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab10/Stack.i
 
 # target to preprocess a source file
-Users/welease/Data-structures-and-algorithms/lab8/lab8.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab8.dir/build.make CMakeFiles/lab8.dir/Users/welease/Data-structures-and-algorithms/lab8/lab8.cpp.i
-.PHONY : Users/welease/Data-structures-and-algorithms/lab8/lab8.cpp.i
+home/tanzilya/Data-structures-and-algorithms/lab10/Stack.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/home/tanzilya/Data-structures-and-algorithms/lab10/Stack.cpp.i
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab10/Stack.cpp.i
 
-Users/welease/Data-structures-and-algorithms/lab8/lab8.s: Users/welease/Data-structures-and-algorithms/lab8/lab8.cpp.s
+home/tanzilya/Data-structures-and-algorithms/lab10/Stack.s: home/tanzilya/Data-structures-and-algorithms/lab10/Stack.cpp.s
 
-.PHONY : Users/welease/Data-structures-and-algorithms/lab8/lab8.s
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab10/Stack.s
 
 # target to generate assembly for a file
-Users/welease/Data-structures-and-algorithms/lab8/lab8.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab8.dir/build.make CMakeFiles/lab8.dir/Users/welease/Data-structures-and-algorithms/lab8/lab8.cpp.s
-.PHONY : Users/welease/Data-structures-and-algorithms/lab8/lab8.cpp.s
+home/tanzilya/Data-structures-and-algorithms/lab10/Stack.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/home/tanzilya/Data-structures-and-algorithms/lab10/Stack.cpp.s
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab10/Stack.cpp.s
 
-Users/welease/Data-structures-and-algorithms/lab9/lab9.o: Users/welease/Data-structures-and-algorithms/lab9/lab9.cpp.o
+home/tanzilya/Data-structures-and-algorithms/lab10/lab10.o: home/tanzilya/Data-structures-and-algorithms/lab10/lab10.cpp.o
 
-.PHONY : Users/welease/Data-structures-and-algorithms/lab9/lab9.o
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab10/lab10.o
 
 # target to build an object file
-Users/welease/Data-structures-and-algorithms/lab9/lab9.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab9.dir/build.make CMakeFiles/lab9.dir/Users/welease/Data-structures-and-algorithms/lab9/lab9.cpp.o
-.PHONY : Users/welease/Data-structures-and-algorithms/lab9/lab9.cpp.o
+home/tanzilya/Data-structures-and-algorithms/lab10/lab10.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/home/tanzilya/Data-structures-and-algorithms/lab10/lab10.cpp.o
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab10/lab10.cpp.o
 
-Users/welease/Data-structures-and-algorithms/lab9/lab9.i: Users/welease/Data-structures-and-algorithms/lab9/lab9.cpp.i
+home/tanzilya/Data-structures-and-algorithms/lab10/lab10.i: home/tanzilya/Data-structures-and-algorithms/lab10/lab10.cpp.i
 
-.PHONY : Users/welease/Data-structures-and-algorithms/lab9/lab9.i
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab10/lab10.i
 
 # target to preprocess a source file
-Users/welease/Data-structures-and-algorithms/lab9/lab9.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab9.dir/build.make CMakeFiles/lab9.dir/Users/welease/Data-structures-and-algorithms/lab9/lab9.cpp.i
-.PHONY : Users/welease/Data-structures-and-algorithms/lab9/lab9.cpp.i
+home/tanzilya/Data-structures-and-algorithms/lab10/lab10.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/home/tanzilya/Data-structures-and-algorithms/lab10/lab10.cpp.i
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab10/lab10.cpp.i
 
-Users/welease/Data-structures-and-algorithms/lab9/lab9.s: Users/welease/Data-structures-and-algorithms/lab9/lab9.cpp.s
+home/tanzilya/Data-structures-and-algorithms/lab10/lab10.s: home/tanzilya/Data-structures-and-algorithms/lab10/lab10.cpp.s
 
-.PHONY : Users/welease/Data-structures-and-algorithms/lab9/lab9.s
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab10/lab10.s
 
 # target to generate assembly for a file
-Users/welease/Data-structures-and-algorithms/lab9/lab9.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab9.dir/build.make CMakeFiles/lab9.dir/Users/welease/Data-structures-and-algorithms/lab9/lab9.cpp.s
-.PHONY : Users/welease/Data-structures-and-algorithms/lab9/lab9.cpp.s
+home/tanzilya/Data-structures-and-algorithms/lab10/lab10.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/home/tanzilya/Data-structures-and-algorithms/lab10/lab10.cpp.s
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab10/lab10.cpp.s
+
+home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.o: home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.cpp.o
+
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.o
+
+# target to build an object file
+home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab8.dir/build.make CMakeFiles/lab8.dir/home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.cpp.o
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.cpp.o
+
+home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.i: home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.cpp.i
+
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.i
+
+# target to preprocess a source file
+home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab8.dir/build.make CMakeFiles/lab8.dir/home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.cpp.i
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.cpp.i
+
+home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.s: home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.cpp.s
+
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.s
+
+# target to generate assembly for a file
+home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab8.dir/build.make CMakeFiles/lab8.dir/home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.cpp.s
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.cpp.s
+
+home/tanzilya/Data-structures-and-algorithms/lab8/main8.o: home/tanzilya/Data-structures-and-algorithms/lab8/main8.cpp.o
+
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab8/main8.o
+
+# target to build an object file
+home/tanzilya/Data-structures-and-algorithms/lab8/main8.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab8.dir/build.make CMakeFiles/lab8.dir/home/tanzilya/Data-structures-and-algorithms/lab8/main8.cpp.o
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab8/main8.cpp.o
+
+home/tanzilya/Data-structures-and-algorithms/lab8/main8.i: home/tanzilya/Data-structures-and-algorithms/lab8/main8.cpp.i
+
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab8/main8.i
+
+# target to preprocess a source file
+home/tanzilya/Data-structures-and-algorithms/lab8/main8.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab8.dir/build.make CMakeFiles/lab8.dir/home/tanzilya/Data-structures-and-algorithms/lab8/main8.cpp.i
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab8/main8.cpp.i
+
+home/tanzilya/Data-structures-and-algorithms/lab8/main8.s: home/tanzilya/Data-structures-and-algorithms/lab8/main8.cpp.s
+
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab8/main8.s
+
+# target to generate assembly for a file
+home/tanzilya/Data-structures-and-algorithms/lab8/main8.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab8.dir/build.make CMakeFiles/lab8.dir/home/tanzilya/Data-structures-and-algorithms/lab8/main8.cpp.s
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab8/main8.cpp.s
+
+home/tanzilya/Data-structures-and-algorithms/lab9/lab9.o: home/tanzilya/Data-structures-and-algorithms/lab9/lab9.cpp.o
+
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab9/lab9.o
+
+# target to build an object file
+home/tanzilya/Data-structures-and-algorithms/lab9/lab9.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab9.dir/build.make CMakeFiles/lab9.dir/home/tanzilya/Data-structures-and-algorithms/lab9/lab9.cpp.o
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab9/lab9.cpp.o
+
+home/tanzilya/Data-structures-and-algorithms/lab9/lab9.i: home/tanzilya/Data-structures-and-algorithms/lab9/lab9.cpp.i
+
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab9/lab9.i
+
+# target to preprocess a source file
+home/tanzilya/Data-structures-and-algorithms/lab9/lab9.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab9.dir/build.make CMakeFiles/lab9.dir/home/tanzilya/Data-structures-and-algorithms/lab9/lab9.cpp.i
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab9/lab9.cpp.i
+
+home/tanzilya/Data-structures-and-algorithms/lab9/lab9.s: home/tanzilya/Data-structures-and-algorithms/lab9/lab9.cpp.s
+
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab9/lab9.s
+
+# target to generate assembly for a file
+home/tanzilya/Data-structures-and-algorithms/lab9/lab9.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab9.dir/build.make CMakeFiles/lab9.dir/home/tanzilya/Data-structures-and-algorithms/lab9/lab9.cpp.s
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab9/lab9.cpp.s
 
 lab7.o: lab7.cpp.o
 
@@ -329,18 +356,21 @@ help:
 	@echo "... lab7"
 	@echo "... lab8"
 	@echo "... lab9"
-	@echo "... Users/welease/Data-structures-and-algorithms/lab10/Stack.o"
-	@echo "... Users/welease/Data-structures-and-algorithms/lab10/Stack.i"
-	@echo "... Users/welease/Data-structures-and-algorithms/lab10/Stack.s"
-	@echo "... Users/welease/Data-structures-and-algorithms/lab10/lab10.o"
-	@echo "... Users/welease/Data-structures-and-algorithms/lab10/lab10.i"
-	@echo "... Users/welease/Data-structures-and-algorithms/lab10/lab10.s"
-	@echo "... Users/welease/Data-structures-and-algorithms/lab8/lab8.o"
-	@echo "... Users/welease/Data-structures-and-algorithms/lab8/lab8.i"
-	@echo "... Users/welease/Data-structures-and-algorithms/lab8/lab8.s"
-	@echo "... Users/welease/Data-structures-and-algorithms/lab9/lab9.o"
-	@echo "... Users/welease/Data-structures-and-algorithms/lab9/lab9.i"
-	@echo "... Users/welease/Data-structures-and-algorithms/lab9/lab9.s"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab10/Stack.o"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab10/Stack.i"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab10/Stack.s"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab10/lab10.o"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab10/lab10.i"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab10/lab10.s"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.o"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.i"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.s"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab8/main8.o"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab8/main8.i"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab8/main8.s"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab9/lab9.o"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab9/lab9.i"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab9/lab9.s"
 	@echo "... lab7.o"
 	@echo "... lab7.i"
 	@echo "... lab7.s"

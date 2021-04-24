@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/lab8.dir/Users/welease/Data-structures-and-algorithms/lab8/lab8.cpp.o"
+  "CMakeFiles/lab8.dir/home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.cpp.o"
+  "CMakeFiles/lab8.dir/home/tanzilya/Data-structures-and-algorithms/lab8/main8.cpp.o"
   "lab8"
   "lab8.pdb"
 )

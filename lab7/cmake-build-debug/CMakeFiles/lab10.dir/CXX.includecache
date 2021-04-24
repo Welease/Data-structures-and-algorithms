@@ -6,7 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/welease/Data-structures-and-algorithms/lab10/Stack.h
+/home/tanzilya/Data-structures-and-algorithms/lab10/Stack.cpp
+Stack.h
+/home/tanzilya/Data-structures-and-algorithms/lab10/Stack.h
+
+/home/tanzilya/Data-structures-and-algorithms/lab10/Stack.h
 stdlib.h
 -
 iostream
@@ -14,11 +18,11 @@ iostream
 random
 -
 Tree.h
-/Users/welease/Data-structures-and-algorithms/lab10/Tree.h
+/home/tanzilya/Data-structures-and-algorithms/lab10/Tree.h
 
-/Users/welease/Data-structures-and-algorithms/lab10/Tree.h
+/home/tanzilya/Data-structures-and-algorithms/lab10/Tree.h
 
-/Users/welease/Data-structures-and-algorithms/lab10/lab10.cpp
+/home/tanzilya/Data-structures-and-algorithms/lab10/lab10.cpp
 iostream
 -
 fstream
@@ -26,7 +30,7 @@ fstream
 fcntl.h
 -
 Tree.h
-/Users/welease/Data-structures-and-algorithms/lab10/Tree.h
+/home/tanzilya/Data-structures-and-algorithms/lab10/Tree.h
 Stack.h
-/Users/welease/Data-structures-and-algorithms/lab10/Stack.h
+/home/tanzilya/Data-structures-and-algorithms/lab10/Stack.h
 

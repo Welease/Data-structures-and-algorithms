@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/welease/Data-structures-and-algorithms/lab7
+/home/tanzilya/Downloads/clion-2020.3.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/tanzilya/Data-structures-and-algorithms/lab7
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/welease/Data-structures-and-algorithms/lab7/cmake-build-debug
+-- Build files have been written to: /home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug

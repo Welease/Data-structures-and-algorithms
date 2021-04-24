@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/lab10.dir/Users/welease/Data-structures-and-algorithms/lab10/Stack.cpp.o"
-  "CMakeFiles/lab10.dir/Users/welease/Data-structures-and-algorithms/lab10/lab10.cpp.o"
+  "CMakeFiles/lab10.dir/home/tanzilya/Data-structures-and-algorithms/lab10/Stack.cpp.o"
+  "CMakeFiles/lab10.dir/home/tanzilya/Data-structures-and-algorithms/lab10/lab10.cpp.o"
   "lab10"
   "lab10.pdb"
 )

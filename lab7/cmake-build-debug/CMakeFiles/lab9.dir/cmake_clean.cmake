@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/lab9.dir/Users/welease/Data-structures-and-algorithms/lab9/lab9.cpp.o"
+  "CMakeFiles/lab9.dir/home/tanzilya/Data-structures-and-algorithms/lab9/lab9.cpp.o"
   "lab9"
   "lab9.pdb"
 )
