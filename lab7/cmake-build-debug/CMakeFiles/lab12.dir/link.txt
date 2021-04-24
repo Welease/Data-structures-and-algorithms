@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/lab12.dir/home/tanzilya/Data-structures-and-algorithms/lab12/lab12.cpp.o  -o lab12 
