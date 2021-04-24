@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/lab15.dir/home/tanzilya/Data-structures-and-algorithms/lab15/lab15.cpp.o  -o lab15 

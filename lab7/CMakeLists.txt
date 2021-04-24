@@ -16,3 +16,7 @@ add_executable(lab11 ../lab11/lab11.cpp ../lab11/Tree.h ../lab11/Stack.cpp ../la
 add_executable(lab12 ../lab12/lab12.cpp ../lab12/TreeNode.h)
 
 add_executable(lab13 ../lab13/lab13.cpp)
+
+add_executable(lab14 ../lab14/lab14.cpp)
+
+add_executable(lab15 ../lab15/lab15.cpp)

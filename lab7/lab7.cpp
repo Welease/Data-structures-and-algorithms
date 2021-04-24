@@ -6,7 +6,7 @@
 
 void printOneList(ft::list<int> const list) {
 	if (list.empty()) {
-		std::cout << RED << "List is empty:(" << DEFAULT << std::endl;
+		std::cout << RED << "listNode is empty:(" << DEFAULT << std::endl;
 		return;
 	}
 	for (auto i = list.begin(); i != list.end(); ++i)
@@ -68,7 +68,7 @@ int main() {
 			if (i != list.end())
 				list.erase(i);
 			else
-				std::cout << RED << "List is empty" << DEFAULT << std::endl;
+				std::cout << RED << "listNode is empty" << DEFAULT << std::endl;
 		}
 		else if (input == "6")
 			printOneList(list);
@@ -76,12 +76,12 @@ int main() {
 			if (!list.empty())
 				list.pop_back();
 			else
-				std::cout << RED << "List is empty" << DEFAULT << std::endl;
+				std::cout << RED << "listNode is empty" << DEFAULT << std::endl;
 		else if (input == "8")
 			if (!list.empty())
 				list.pop_front();
 			else
-				std::cout << RED << "List is empty" << DEFAULT << std::endl;
+				std::cout << RED << "listNode is empty" << DEFAULT << std::endl;
 		else if (input == "9") {
 			exit(0);
 		}

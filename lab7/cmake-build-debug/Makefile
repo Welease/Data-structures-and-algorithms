@@ -76,17 +76,6 @@ CMAKE_BINARY_DIR = /home/tanzilya/Data-structures-and-algorithms/lab7/cmake-buil
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/tanzilya/Downloads/clion-2020.3.1/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -97,6 +86,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/home/tanzilya/Downloads/clion-2020.3.1/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -131,43 +131,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named lab13
+# Target rules for targets named lab9
 
 # Build rule for target.
-lab13: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab13
-.PHONY : lab13
+lab9: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab9
+.PHONY : lab9
 
 # fast build rule for target.
-lab13/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab13.dir/build.make CMakeFiles/lab13.dir/build
-.PHONY : lab13/fast
-
-#=============================================================================
-# Target rules for targets named lab12
-
-# Build rule for target.
-lab12: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab12
-.PHONY : lab12
-
-# fast build rule for target.
-lab12/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab12.dir/build.make CMakeFiles/lab12.dir/build
-.PHONY : lab12/fast
-
-#=============================================================================
-# Target rules for targets named lab11
-
-# Build rule for target.
-lab11: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab11
-.PHONY : lab11
-
-# fast build rule for target.
-lab11/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab11.dir/build.make CMakeFiles/lab11.dir/build
-.PHONY : lab11/fast
+lab9/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab9.dir/build.make CMakeFiles/lab9.dir/build
+.PHONY : lab9/fast
 
 #=============================================================================
 # Target rules for targets named lab7
@@ -183,6 +157,19 @@ lab7/fast:
 .PHONY : lab7/fast
 
 #=============================================================================
+# Target rules for targets named lab10
+
+# Build rule for target.
+lab10: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab10
+.PHONY : lab10
+
+# fast build rule for target.
+lab10/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/build
+.PHONY : lab10/fast
+
+#=============================================================================
 # Target rules for targets named lab8
 
 # Build rule for target.
@@ -196,30 +183,69 @@ lab8/fast:
 .PHONY : lab8/fast
 
 #=============================================================================
-# Target rules for targets named lab9
+# Target rules for targets named lab11
 
 # Build rule for target.
-lab9: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab9
-.PHONY : lab9
+lab11: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab11
+.PHONY : lab11
 
 # fast build rule for target.
-lab9/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab9.dir/build.make CMakeFiles/lab9.dir/build
-.PHONY : lab9/fast
+lab11/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab11.dir/build.make CMakeFiles/lab11.dir/build
+.PHONY : lab11/fast
 
 #=============================================================================
-# Target rules for targets named lab10
+# Target rules for targets named lab12
 
 # Build rule for target.
-lab10: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab10
-.PHONY : lab10
+lab12: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab12
+.PHONY : lab12
 
 # fast build rule for target.
-lab10/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/build
-.PHONY : lab10/fast
+lab12/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab12.dir/build.make CMakeFiles/lab12.dir/build
+.PHONY : lab12/fast
+
+#=============================================================================
+# Target rules for targets named lab15
+
+# Build rule for target.
+lab15: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab15
+.PHONY : lab15
+
+# fast build rule for target.
+lab15/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/build
+.PHONY : lab15/fast
+
+#=============================================================================
+# Target rules for targets named lab13
+
+# Build rule for target.
+lab13: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab13
+.PHONY : lab13
+
+# fast build rule for target.
+lab13/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab13.dir/build.make CMakeFiles/lab13.dir/build
+.PHONY : lab13/fast
+
+#=============================================================================
+# Target rules for targets named lab14
+
+# Build rule for target.
+lab14: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab14
+.PHONY : lab14
+
+# fast build rule for target.
+lab14/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab14.dir/build.make CMakeFiles/lab14.dir/build
+.PHONY : lab14/fast
 
 home/tanzilya/Data-structures-and-algorithms/lab10/Stack.o: home/tanzilya/Data-structures-and-algorithms/lab10/Stack.cpp.o
 
@@ -383,6 +409,60 @@ home/tanzilya/Data-structures-and-algorithms/lab13/lab13.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab13.dir/build.make CMakeFiles/lab13.dir/home/tanzilya/Data-structures-and-algorithms/lab13/lab13.cpp.s
 .PHONY : home/tanzilya/Data-structures-and-algorithms/lab13/lab13.cpp.s
 
+home/tanzilya/Data-structures-and-algorithms/lab14/lab14.o: home/tanzilya/Data-structures-and-algorithms/lab14/lab14.cpp.o
+
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab14/lab14.o
+
+# target to build an object file
+home/tanzilya/Data-structures-and-algorithms/lab14/lab14.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab14.dir/build.make CMakeFiles/lab14.dir/home/tanzilya/Data-structures-and-algorithms/lab14/lab14.cpp.o
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab14/lab14.cpp.o
+
+home/tanzilya/Data-structures-and-algorithms/lab14/lab14.i: home/tanzilya/Data-structures-and-algorithms/lab14/lab14.cpp.i
+
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab14/lab14.i
+
+# target to preprocess a source file
+home/tanzilya/Data-structures-and-algorithms/lab14/lab14.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab14.dir/build.make CMakeFiles/lab14.dir/home/tanzilya/Data-structures-and-algorithms/lab14/lab14.cpp.i
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab14/lab14.cpp.i
+
+home/tanzilya/Data-structures-and-algorithms/lab14/lab14.s: home/tanzilya/Data-structures-and-algorithms/lab14/lab14.cpp.s
+
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab14/lab14.s
+
+# target to generate assembly for a file
+home/tanzilya/Data-structures-and-algorithms/lab14/lab14.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab14.dir/build.make CMakeFiles/lab14.dir/home/tanzilya/Data-structures-and-algorithms/lab14/lab14.cpp.s
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab14/lab14.cpp.s
+
+home/tanzilya/Data-structures-and-algorithms/lab15/lab15.o: home/tanzilya/Data-structures-and-algorithms/lab15/lab15.cpp.o
+
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab15/lab15.o
+
+# target to build an object file
+home/tanzilya/Data-structures-and-algorithms/lab15/lab15.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/home/tanzilya/Data-structures-and-algorithms/lab15/lab15.cpp.o
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab15/lab15.cpp.o
+
+home/tanzilya/Data-structures-and-algorithms/lab15/lab15.i: home/tanzilya/Data-structures-and-algorithms/lab15/lab15.cpp.i
+
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab15/lab15.i
+
+# target to preprocess a source file
+home/tanzilya/Data-structures-and-algorithms/lab15/lab15.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/home/tanzilya/Data-structures-and-algorithms/lab15/lab15.cpp.i
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab15/lab15.cpp.i
+
+home/tanzilya/Data-structures-and-algorithms/lab15/lab15.s: home/tanzilya/Data-structures-and-algorithms/lab15/lab15.cpp.s
+
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab15/lab15.s
+
+# target to generate assembly for a file
+home/tanzilya/Data-structures-and-algorithms/lab15/lab15.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/home/tanzilya/Data-structures-and-algorithms/lab15/lab15.cpp.s
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab15/lab15.cpp.s
+
 home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.o: home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.cpp.o
 
 .PHONY : home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.o
@@ -503,6 +583,8 @@ help:
 	@echo "... lab11"
 	@echo "... lab12"
 	@echo "... lab13"
+	@echo "... lab14"
+	@echo "... lab15"
 	@echo "... lab7"
 	@echo "... lab8"
 	@echo "... lab9"
@@ -524,6 +606,12 @@ help:
 	@echo "... home/tanzilya/Data-structures-and-algorithms/lab13/lab13.o"
 	@echo "... home/tanzilya/Data-structures-and-algorithms/lab13/lab13.i"
 	@echo "... home/tanzilya/Data-structures-and-algorithms/lab13/lab13.s"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab14/lab14.o"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab14/lab14.i"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab14/lab14.s"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab15/lab15.o"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab15/lab15.i"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab15/lab15.s"
 	@echo "... home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.o"
 	@echo "... home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.i"
 	@echo "... home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.s"

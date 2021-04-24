@@ -32,11 +32,11 @@ void printList() {
                     i++;
                 }
             }
-            else std::cout << "   " <<RED << "List is empty:(" << DEFAULT << std::endl;
+            else std::cout << "   " <<RED << "listNode is empty:(" << DEFAULT << std::endl;
             tmp = tmp -> nextMain;
         }
     }
-    else std::cout << RED << "List is empty:(" << DEFAULT << std::endl;
+    else std::cout << RED << "listNode is empty:(" << DEFAULT << std::endl;
 }
 
 int pushToParentBefore(std::string & input, int & i, parentList *&tmp, parentList *& cur, std::string & ch) {
@@ -58,7 +58,7 @@ int pushToParentBefore(std::string & input, int & i, parentList *&tmp, parentLis
         Pred -> nextMain = tmp;
         return 1;
     }
-    else std::cout << RED << "List is empty:(" << DEFAULT << std::endl; ch = "";
+    else std::cout << RED << "listNode is empty:(" << DEFAULT << std::endl; ch = "";
     return 0;
 }
 
@@ -103,7 +103,7 @@ void pushToParentList() {
     }
     std::cout << "Input name of new list: "; std::cin >> input;
     tmp ->headChildList-> value = input; countOfElements++;
-    std::cout << GREEN << "List successfully added to list of list" << DEFAULT << std::endl;
+    std::cout << GREEN << "listNode successfully added to list of list" << DEFAULT << std::endl;
 }
 
 void pushBeforeToChild(std::string & ch, parentList *tmpPar) {
@@ -130,7 +130,7 @@ void pushBeforeToChild(std::string & ch, parentList *tmpPar) {
         std::cout << "Input string: "; std::cin >> input;
         std::cout << GREEN << "Element successfully added!" << DEFAULT << std::endl; tmp -> value = input;
     }
-    else std::cout << RED << "List is empty:(" << DEFAULT << std::endl;
+    else std::cout << RED << "listNode is empty:(" << DEFAULT << std::endl;
 }
 
 void pushAfterToChild(parentList *tmpPar) {
@@ -180,7 +180,7 @@ void pushToChild(){
             else std::cout << RED << "Incorrect input:(" << DEFAULT << std::endl; ch = "";
         }
     }
-    else std::cout << RED << "List of list is empty:(" << DEFAULT << std::endl;
+    else std::cout << RED << "listNode of list is empty:(" << DEFAULT << std::endl;
 }
 
 
@@ -215,7 +215,7 @@ void popFromParent(){
         delete curParent;
         std::cout << GREEN << "Element successfully deleted!" << DEFAULT << std::endl;
     }
-    else std::cout << RED << "List is empty:(" << DEFAULT << std::endl;
+    else std::cout << RED << "listNode is empty:(" << DEFAULT << std::endl;
 }
 
 void popFromChildList(){
@@ -253,9 +253,9 @@ void popFromChildList(){
             std::cout << GREEN << "Element successfully deleted" << DEFAULT <<std::endl;
             delete cur;
         }
-        else std::cout << RED << "List is empty:(" << DEFAULT << std::endl;
+        else std::cout << RED << "listNode is empty:(" << DEFAULT << std::endl;
     }
-    else std::cout << RED << "List of list is empty:(" << DEFAULT << std::endl;
+    else std::cout << RED << "listNode of list is empty:(" << DEFAULT << std::endl;
 }
 
 void find() {
@@ -278,7 +278,7 @@ void find() {
                 if (tmpChild) { std::cout << "String " << toFind << " found\n"; j++;}
                 else std::cout << "This list haven't such string" << std::endl;
             }
-            else std::cout << RED << "List " << tmpParent->headChildList->value << " is empty\n" << DEFAULT;
+            else std::cout << RED << "listNode " << tmpParent->headChildList->value << " is empty\n" << DEFAULT;
             tmpParent = tmpParent -> nextMain;
         }
         if (j==0) std::cout << RED << "Can't find such string:(" << DEFAULT << std::endl;
@@ -299,5 +299,5 @@ void clearAll(){
         parentHead = curParentHead -> nextMain;
         delete curParentHead;
     }
-    std::cout << GREEN << "List is successfully cleared" << DEFAULT << std::endl;
+    std::cout << GREEN << "listNode is successfully cleared" << DEFAULT << std::endl;
 }

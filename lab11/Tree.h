@@ -5,10 +5,10 @@
 #ifndef TREE_H
 #define TREE_H
 
-typedef struct node {
+typedef struct listNode {
 	int key;
-	struct node *left;
-	struct node *right;
+	struct listNode *left;
+	struct listNode *right;
 }				TreeNode;
 
 #endif //TREE_H

@@ -180,7 +180,7 @@ int main() {
              <<"3 - search element\n"
              <<"4 - print tree in reverse symmetrical\n"
              <<"5 - print all keys\n"
-             <<"6 - delete node\n"
+             <<"6 - delete listNode\n"
              <<"0 - exit\n"
              <<"====>" << DEFAULT; std::cin >> input;
         if (input == "1") {
