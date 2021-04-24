@@ -33,34 +33,9 @@ void formTree(int n, TreeNode **parent) {
 
 void clear(TreeNode *root) {
 	if (root) {
-		TreeNode *right, *left;
-		right = root->right;
-		left = root->left;
-		delete root;
-		clear(left);
-		clear(right);
-	}
-}
-
-void printIterInSym(TreeNode *root) {
-	t_stack *stack = getNewStack();
-	TreeNode *t;
-	int l = -1;
-	while (stack->size != 0 || root != NULL) {
-		if (root != NULL) {
-			push(stack, root, ++l);
-			root = root->left;
-		} else {
-			t = stack->top->node;
-			l = stack->top->l;
-			pop(stack);
-			root = t;
-			for (int i = 1; i <= l; ++i) {
-				std::cout << "     ";
-			}
-			std::cout << root->key << std::endl;
-			root = root->right;
-		}
+		clear(root->left);
+		clear(root->right);
+        delete root;
 	}
 }
 
@@ -75,93 +50,96 @@ void printReversSym(TreeNode *root, int l) {
 	}
 }
 
-void printInStraight(TreeNode *root, int l) {
-	if (root) {
-		for (int i = 1; i <= l; ++i) {
-			std::cout << "     ";
-		}
-		std::cout << root->key << std::endl;
-		printInStraight(root->left, l + 1);
-		printInStraight(root->right, l + 1);
-	}
+void find(TreeNode *root, TreeNode **parent, int key, bool & flag) {
+    if (root) {
+        if (root->key == key) {
+            flag = true;
+            *parent = root;
+            return;
+        }
+        find(root->left,parent, key, flag);
+        find(root->right, parent, key, flag);
+    }
 }
 
-
-void printInSym(TreeNode *root, int l) {
-	if (root) {
-		printInSym(root->left, l + 1);
-		for (int i = 1; i <= l; ++i) {
-			std::cout << "     ";
-		}
-		std::cout << root->key << std::endl;
-		printInSym(root->right, l + 1);
-	}
+TreeNode *newNode(int key) {
+    TreeNode *root;
+    root = new TreeNode;
+    root->key = key;
+    root->left = nullptr;
+    root->right = nullptr;
 }
 
-TreeNode *find(TreeNode *root, int key) {
-    if (!root)
-        return nullptr;
-    if (root->key == key)
-        return root;
-    if (root->key >= key) {
-        return find(root->left, key);
+void insert(TreeNode **root) {
+    TreeNode *found = nullptr;
+    bool flag = false, place = false; //false is right
+    int key, toFind;
+    if (!*root) {
+        std::cout << "Tree is empty, so input just key:";
+        std::cin >> key;
+        *root = newNode(key);
     }
     else {
-        return find(root->right, key);
+        std::cout << "Input the parent element:"; std::cin >> toFind;
+        find(*root, &found, toFind, flag);
+        if (flag) {
+            if (found->left && found->right)
+                std::cout << "Can't add the element:(" << std::endl;
+            else if (!found->left && !found->right) {
+                std::cout << "Input the key:"; std::cin >> key;
+                std::cout << "Add to left or to right? (1 - left, 0 - right)"; std::cin >> place;
+                place ? found->left = newNode(key) : found->right = newNode(key);
+            }
+            else if (!found->left) {
+                std::cout << "Input the key:"; std::cin >> key;
+                found->left = newNode(key);
+            }
+            else {
+                std::cout << "Input the key:"; std::cin >> key;
+                found->right = newNode(key);
+            }
+        }
+        else
+            std::cout << "Such element was not found:(" << std::endl;
     }
-    return nullptr;
 }
 
 int main() {
 	std::string input;
 	TreeNode *root = nullptr;
-	int n;
-	while (true) {
+	TreeNode *found = nullptr;
+	bool flag = false;
+	int n, key;
+	while (1) {
 		std::cout << BLUE << "Choose option:\n" <<
-				  "1 - create new tree\n" <<
-				  "2 - print in straight order\n" <<
-				  "3 - print in symmetrical order\n" <<
-				  "4 - print in reverse symmetrical order\n" <<
-				  "5 - print ITER in symmetrical order\n" <<
-				  "6 - find element\n" <<
-				  "0 - exit\n====>" << DEFAULT << std::endl;
+				  "1 - add element\n" <<
+				  "2 - print in reverse symmetrical order\n" <<
+				  "3 - find element\n" <<
+				  "4 - clear tree\n" <<
+				  "5 - exit\n====>" << DEFAULT << std::endl;
 		std::cin >> input;
 		if (input == "1") {
-			std::cout << "Input count of nodes:";
-			std::cin >> n;
-			clear(root);
-			formTree(n, &root);
+			insert(&root);
 		}
 		else if (input == "2") {
-			std::cout << "in straight order:" << std::endl;
-			printInStraight(root, 0);
-			std::cout << std::endl;
-		}
-		else if (input == "3") {
-			std::cout << "in straight symmetrical order:" << std::endl;
-			printInSym(root, 0);
-			std::cout << std::endl;
-		}
-		else if (input == "4") {
 			std::cout << "in reverse symmetrical order" << std::endl;
 			printReversSym(root, 0);
 		}
-		else if (input == "5") {
-			std::cout << "in straight symmetrical order by ITER method:" << std::endl;
-			printIterInSym(root);
-		}
-		else if (input == "6") {
-		    std::cout << "Input the num to find:\n===>";
-		    int k; std::cin >> input;
-		    try { k = std::stoi(input);
-		    TreeNode *tmp = find(root, k);
-		    if (tmp)
-		        std::cout << tmp->key << std::endl;
+		else if (input == "3") {
+		    std::cout << "Input key:" << std::endl;
+		    std::cin >> key;
+		    find(root, &found, key, flag);
+		    if (flag)
+		        std::cout << found->key << std::endl;
 		    else
-		        std::cout << RED << "Element not found:(" << DEFAULT << std::endl;}
-		    catch (std::exception & ex) {std::cout << RED << "Incorrect argument:(" << DEFAULT << std::endl;}
+		        std::cout << "Element not found:(" << std::endl;
+		    flag = false;
 		}
-		else if (input == "0")
+		else if (input == "4") {
+		    clear(root);
+		    root = nullptr;
+		}
+		else if (input == "5")
 			exit(0);
 		else
 			std::cout << RED << "Incorrect command:(" << DEFAULT << std::endl;

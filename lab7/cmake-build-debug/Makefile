@@ -131,6 +131,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named lab11
+
+# Build rule for target.
+lab11: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab11
+.PHONY : lab11
+
+# fast build rule for target.
+lab11/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab11.dir/build.make CMakeFiles/lab11.dir/build
+.PHONY : lab11/fast
+
+#=============================================================================
 # Target rules for targets named lab7
 
 # Build rule for target.
@@ -235,6 +248,60 @@ home/tanzilya/Data-structures-and-algorithms/lab10/lab10.s: home/tanzilya/Data-s
 home/tanzilya/Data-structures-and-algorithms/lab10/lab10.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/home/tanzilya/Data-structures-and-algorithms/lab10/lab10.cpp.s
 .PHONY : home/tanzilya/Data-structures-and-algorithms/lab10/lab10.cpp.s
+
+home/tanzilya/Data-structures-and-algorithms/lab11/Stack.o: home/tanzilya/Data-structures-and-algorithms/lab11/Stack.cpp.o
+
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab11/Stack.o
+
+# target to build an object file
+home/tanzilya/Data-structures-and-algorithms/lab11/Stack.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab11.dir/build.make CMakeFiles/lab11.dir/home/tanzilya/Data-structures-and-algorithms/lab11/Stack.cpp.o
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab11/Stack.cpp.o
+
+home/tanzilya/Data-structures-and-algorithms/lab11/Stack.i: home/tanzilya/Data-structures-and-algorithms/lab11/Stack.cpp.i
+
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab11/Stack.i
+
+# target to preprocess a source file
+home/tanzilya/Data-structures-and-algorithms/lab11/Stack.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab11.dir/build.make CMakeFiles/lab11.dir/home/tanzilya/Data-structures-and-algorithms/lab11/Stack.cpp.i
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab11/Stack.cpp.i
+
+home/tanzilya/Data-structures-and-algorithms/lab11/Stack.s: home/tanzilya/Data-structures-and-algorithms/lab11/Stack.cpp.s
+
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab11/Stack.s
+
+# target to generate assembly for a file
+home/tanzilya/Data-structures-and-algorithms/lab11/Stack.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab11.dir/build.make CMakeFiles/lab11.dir/home/tanzilya/Data-structures-and-algorithms/lab11/Stack.cpp.s
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab11/Stack.cpp.s
+
+home/tanzilya/Data-structures-and-algorithms/lab11/lab11.o: home/tanzilya/Data-structures-and-algorithms/lab11/lab11.cpp.o
+
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab11/lab11.o
+
+# target to build an object file
+home/tanzilya/Data-structures-and-algorithms/lab11/lab11.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab11.dir/build.make CMakeFiles/lab11.dir/home/tanzilya/Data-structures-and-algorithms/lab11/lab11.cpp.o
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab11/lab11.cpp.o
+
+home/tanzilya/Data-structures-and-algorithms/lab11/lab11.i: home/tanzilya/Data-structures-and-algorithms/lab11/lab11.cpp.i
+
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab11/lab11.i
+
+# target to preprocess a source file
+home/tanzilya/Data-structures-and-algorithms/lab11/lab11.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab11.dir/build.make CMakeFiles/lab11.dir/home/tanzilya/Data-structures-and-algorithms/lab11/lab11.cpp.i
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab11/lab11.cpp.i
+
+home/tanzilya/Data-structures-and-algorithms/lab11/lab11.s: home/tanzilya/Data-structures-and-algorithms/lab11/lab11.cpp.s
+
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab11/lab11.s
+
+# target to generate assembly for a file
+home/tanzilya/Data-structures-and-algorithms/lab11/lab11.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab11.dir/build.make CMakeFiles/lab11.dir/home/tanzilya/Data-structures-and-algorithms/lab11/lab11.cpp.s
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab11/lab11.cpp.s
 
 home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.o: home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.cpp.o
 
@@ -353,6 +420,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... lab10"
+	@echo "... lab11"
 	@echo "... lab7"
 	@echo "... lab8"
 	@echo "... lab9"
@@ -362,6 +430,12 @@ help:
 	@echo "... home/tanzilya/Data-structures-and-algorithms/lab10/lab10.o"
 	@echo "... home/tanzilya/Data-structures-and-algorithms/lab10/lab10.i"
 	@echo "... home/tanzilya/Data-structures-and-algorithms/lab10/lab10.s"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab11/Stack.o"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab11/Stack.i"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab11/Stack.s"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab11/lab11.o"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab11/lab11.i"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab11/lab11.s"
 	@echo "... home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.o"
 	@echo "... home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.i"
 	@echo "... home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.s"

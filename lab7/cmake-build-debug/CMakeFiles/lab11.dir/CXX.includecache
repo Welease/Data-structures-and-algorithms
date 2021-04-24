@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tanzilya/Data-structures-and-algorithms/lab11/Stack.cpp
+Stack.h
+/home/tanzilya/Data-structures-and-algorithms/lab11/Stack.h
+
+/home/tanzilya/Data-structures-and-algorithms/lab11/Stack.h
+stdlib.h
+-
+iostream
+-
+random
+-
+Tree.h
+/home/tanzilya/Data-structures-and-algorithms/lab11/Tree.h
+
+/home/tanzilya/Data-structures-and-algorithms/lab11/Tree.h
+
+/home/tanzilya/Data-structures-and-algorithms/lab11/lab11.cpp
+iostream
+-
+fstream
+-
+fcntl.h
+-
+Tree.h
+/home/tanzilya/Data-structures-and-algorithms/lab11/Tree.h
+Stack.h
+/home/tanzilya/Data-structures-and-algorithms/lab11/Stack.h
+

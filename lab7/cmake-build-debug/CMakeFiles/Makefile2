@@ -73,6 +73,7 @@ CMAKE_BINARY_DIR = /home/tanzilya/Data-structures-and-algorithms/lab7/cmake-buil
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/lab11.dir/all
 all: CMakeFiles/lab7.dir/all
 all: CMakeFiles/lab8.dir/all
 all: CMakeFiles/lab9.dir/all
@@ -86,6 +87,7 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/lab11.dir/clean
 clean: CMakeFiles/lab7.dir/clean
 clean: CMakeFiles/lab8.dir/clean
 clean: CMakeFiles/lab9.dir/clean
@@ -94,13 +96,40 @@ clean: CMakeFiles/lab10.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/lab11.dir
+
+# All Build rule for target.
+CMakeFiles/lab11.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab11.dir/build.make CMakeFiles/lab11.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab11.dir/build.make CMakeFiles/lab11.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/CMakeFiles --progress-num=4,5,6 "Built target lab11"
+.PHONY : CMakeFiles/lab11.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/lab11.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lab11.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/lab11.dir/rule
+
+# Convenience name for target.
+lab11: CMakeFiles/lab11.dir/rule
+
+.PHONY : lab11
+
+# clean rule for target.
+CMakeFiles/lab11.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab11.dir/build.make CMakeFiles/lab11.dir/clean
+.PHONY : CMakeFiles/lab11.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/lab7.dir
 
 # All Build rule for target.
 CMakeFiles/lab7.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab7.dir/build.make CMakeFiles/lab7.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab7.dir/build.make CMakeFiles/lab7.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/CMakeFiles --progress-num=4,5 "Built target lab7"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target lab7"
 .PHONY : CMakeFiles/lab7.dir/all
 
 # Build rule for subdir invocation for target.
@@ -127,7 +156,7 @@ CMakeFiles/lab7.dir/clean:
 CMakeFiles/lab8.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab8.dir/build.make CMakeFiles/lab8.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab8.dir/build.make CMakeFiles/lab8.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/CMakeFiles --progress-num=6,7,8 "Built target lab8"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/CMakeFiles --progress-num=9,10,11 "Built target lab8"
 .PHONY : CMakeFiles/lab8.dir/all
 
 # Build rule for subdir invocation for target.
@@ -154,7 +183,7 @@ CMakeFiles/lab8.dir/clean:
 CMakeFiles/lab9.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab9.dir/build.make CMakeFiles/lab9.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab9.dir/build.make CMakeFiles/lab9.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target lab9"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/CMakeFiles --progress-num=12,13 "Built target lab9"
 .PHONY : CMakeFiles/lab9.dir/all
 
 # Build rule for subdir invocation for target.
