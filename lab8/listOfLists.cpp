@@ -8,19 +8,19 @@ parentList *parentHead;
 
 void initList() {
     parentHead = new parentList();
-    parentHead -> nextMain = NULL;
+    parentHead -> nextParent = NULL;
     parentHead -> headChildList = NULL;
     countOfElements = 0;
 }
 
-bool isParentListEmpty(){ return parentHead->nextMain == NULL; }
+bool isParentListEmpty(){ return parentHead->nextParent == NULL; }
 
 bool isChildListEmpty(parentList *curParent){ return  (curParent -> headChildList -> next == NULL); }
 
 void printList() {
     std::cout << GREEN << "Printing list: " << DEFAULT << std::endl;
     if (!isParentListEmpty()) {
-        parentList *tmp = parentHead -> nextMain;
+        parentList *tmp = parentHead -> nextParent;
         while (tmp) {
             std::cout << "In " << tmp -> headChildList -> value << ":\n";
             int i = 1;
@@ -33,7 +33,7 @@ void printList() {
                 }
             }
             else std::cout << "   " <<RED << "listNode is empty:(" << DEFAULT << std::endl;
-            tmp = tmp -> nextMain;
+            tmp = tmp -> nextParent;
         }
     }
     else std::cout << RED << "listNode is empty:(" << DEFAULT << std::endl;
@@ -43,19 +43,19 @@ int pushToParentBefore(std::string & input, int & i, parentList *&tmp, parentLis
     if (!isParentListEmpty()){
         parentList *Pred = parentHead;
         while (i == -1){
-            cur = parentHead-> nextMain;
+            cur = parentHead-> nextParent;
             std::cout << "Input list before which you want push list: ";std::cin >> input;
             while (cur) {
                 if (cur ->headChildList-> value == input) break;
-                cur = cur -> nextMain;
-                Pred = Pred -> nextMain;
+                cur = cur -> nextParent;
+                Pred = Pred -> nextParent;
             }
             if (cur) i++;
             else { std::cout <<RED << "Can't find such list :(" << DEFAULT << std::endl; }
         }
-        tmp -> nextMain = cur;
+        tmp -> nextParent = cur;
         tmp ->headChildList-> next = NULL;
-        Pred -> nextMain = tmp;
+        Pred -> nextParent = tmp;
         return 1;
     }
     else std::cout << RED << "listNode is empty:(" << DEFAULT << std::endl; ch = "";
@@ -65,22 +65,22 @@ int pushToParentBefore(std::string & input, int & i, parentList *&tmp, parentLis
 int pushToParentAfter(int & i,  parentList *&tmp, parentList *& cur, std::string & input) {
     if (!isParentListEmpty()){
         while (i == -1) {
-            cur = parentHead->nextMain;
+            cur = parentHead->nextParent;
             std::cout << "Input list after which you want push list: "; std::cin >> input;
-            while ((cur != NULL) && (cur -> headChildList-> value != input))
-                cur = cur -> nextMain;
-            if (cur != NULL) i++;
+            while ((cur) && (cur -> headChildList-> value != input))
+                cur = cur -> nextParent;
+            if (cur) i++;
             else { std::cout <<RED << "Can't find such list :(" << DEFAULT << std::endl; }
         }
-        tmp -> nextMain = cur -> nextMain;
+        tmp -> nextParent = cur -> nextParent;
         tmp ->headChildList-> next = NULL;
-        cur -> nextMain = tmp;
+        cur -> nextParent = tmp;
         return 1;
     }
     else {
-        tmp -> nextMain = NULL;
+        tmp -> nextParent = NULL;
         tmp ->headChildList-> next = NULL;
-        parentHead -> nextMain = tmp;
+        parentHead -> nextParent = tmp;
         return 1;
     }
 }
@@ -164,11 +164,11 @@ void pushToChild(){
         parentList *tmpPar = nullptr;
         int i = -1;
         while (i == -1) {
-            tmpPar = parentHead -> nextMain;
+            tmpPar = parentHead -> nextParent;
             std::cout << "Input name of list where you want to push element: ";
             std::cin >> input;
             while ((tmpPar) && (tmpPar -> headChildList -> value != input))
-                tmpPar = tmpPar -> nextMain;
+                tmpPar = tmpPar -> nextParent;
             if (tmpPar) i++;
             else { std::cout << RED << "Can't find such list:(" << DEFAULT << std::endl; }
         }
@@ -191,13 +191,13 @@ void popFromParent(){
         childList *curChild;
         int i = -1;
         while (i == -1) {
-            curParent = parentHead -> nextMain;
+            curParent = parentHead -> nextParent;
             prevParent = parentHead;
             std::cout << "Input name of list: \n===>"; std::cin >> input;
             while (curParent != NULL) {
                 if (curParent -> headChildList -> value == input) break;
-                curParent = curParent -> nextMain;
-                prevParent = prevParent -> nextMain;
+                curParent = curParent -> nextParent;
+                prevParent = prevParent -> nextParent;
             }
             if (curParent) { i++; }
             else { std::cout << RED << "Can't find such element:(" << DEFAULT << std::endl; }
@@ -211,7 +211,7 @@ void popFromParent(){
 
         delete curParent -> headChildList;
 
-        prevParent -> nextMain = curParent -> nextMain;
+        prevParent -> nextParent = curParent -> nextParent;
         delete curParent;
         std::cout << GREEN << "Element successfully deleted!" << DEFAULT << std::endl;
     }
@@ -225,10 +225,10 @@ void popFromChildList(){
         parentList *tmpParent = nullptr;
         int i = -1;
         while (i == -1) {
-            tmpParent = parentHead -> nextMain;
+            tmpParent = parentHead -> nextParent;
             std::cout << "Input name of list: "; std::cin >> input;
             while (tmpParent && (tmpParent->headChildList->value != input))
-                tmpParent = tmpParent -> nextMain;
+                tmpParent = tmpParent -> nextParent;
             if (tmpParent) i++;
             else std::cout << RED << "Can't find such string:(" << DEFAULT << std::endl;
         }
@@ -265,7 +265,7 @@ void find() {
         std::cout << "Input string:\n====>";
         std::cin >> toFind;
         int j = 0;
-        parentList *tmpParent = parentHead->nextMain;
+        parentList *tmpParent = parentHead->nextParent;
         while (tmpParent) {
             std::cout << "\n Search in: " << tmpParent->headChildList->value << "'s list... ";
             if (!isChildListEmpty(tmpParent)) {
@@ -279,7 +279,7 @@ void find() {
                 else std::cout << "This list haven't such string" << std::endl;
             }
             else std::cout << RED << "listNode " << tmpParent->headChildList->value << " is empty\n" << DEFAULT;
-            tmpParent = tmpParent -> nextMain;
+            tmpParent = tmpParent -> nextParent;
         }
         if (j==0) std::cout << RED << "Can't find such string:(" << DEFAULT << std::endl;
     }
@@ -296,7 +296,7 @@ void clearAll(){
             curParentHead -> headChildList = curParentHead -> headChildList -> next;
             delete curChildHead;
         }
-        parentHead = curParentHead -> nextMain;
+        parentHead = curParentHead -> nextParent;
         delete curParentHead;
     }
     std::cout << GREEN << "listNode is successfully cleared" << DEFAULT << std::endl;

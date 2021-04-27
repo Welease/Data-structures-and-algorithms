@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tanzilya/Data-structures-and-algorithms/lab9/Tree.h
+
+/home/tanzilya/Data-structures-and-algorithms/lab9/lab9.cpp
+iostream
+-
+fstream
+-
+fcntl.h
+-
+Tree.h
+/home/tanzilya/Data-structures-and-algorithms/lab9/Tree.h
+

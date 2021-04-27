@@ -19,7 +19,7 @@ struct childList {
 };
 
 struct parentList {
-    parentList *nextMain;
+    parentList *nextParent;
     childList *headChildList;
 };
 

@@ -16,6 +16,7 @@
 struct TreeNode {
     int key;
     int counter;
+    int hd;
     TreeNode *left;
     TreeNode *right;
 };

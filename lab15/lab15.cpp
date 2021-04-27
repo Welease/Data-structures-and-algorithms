@@ -11,6 +11,15 @@
 #include <cstdlib>
 #include <cmath>
 
+int max = 0;
+
+struct listNode {
+    int key = -1;
+    listNode *next = nullptr, *tail = nullptr;
+};
+
+listNode *ls = nullptr, *head = nullptr;
+
 int getRandomNumber(int min, int max) {
     static const double fraction = 1.0 / (static_cast<double>(RAND_MAX) + 1.0);
     return static_cast<int>(rand() * fraction * (max - min + 1) + min);
@@ -42,13 +51,17 @@ void fillArray(int n, int *array) {
         array[i] = getRandomNumber(0, 10000);
 }
 
+
 void bucketSort(int n, int *array) {
     int *copy;
 
     copy = new int[n];
     copyOfArray(n, array, copy);
     int temp; std::string input;
-    std::cout <<"Sort with second array? \n 1 - yes, 0 - no\n"; std::cin >> input;
+    std::cout << "Array before: " << std::endl;
+    printArray(n, array);
+    std::cout << "Sort with second array? \n 1 - yes, 0 - no\n"; std::cin >> input;
+    std::cout << "Array after: " << std::endl;
     if (input == "0") {
         for (int i = 0; i < n; i++) {
             while (copy[i] != i) {
@@ -69,16 +82,6 @@ void bucketSort(int n, int *array) {
         printArray(n, result);
     }
 }
-
-
-int max_key = 0;
-
-struct listNode {
-    int key = -1;
-    listNode *next = nullptr, *tail = nullptr;
-};
-
-listNode *ls = nullptr, *head = nullptr;
 
 void eraseList(listNode *node) {
     if (node->next)
@@ -103,7 +106,7 @@ listNode *combining(listNode *node) {
     head -> next = node[0].next;
     head -> tail = node[0].tail;
     listNode *cur = head;
-    for (int i = 0; i < max_key - 1; i++) {
+    for (int i = 0; i < max - 1; i++) {
         if (node[i].tail)
             cur = node[i].tail;
         cur -> next = new listNode;
@@ -118,8 +121,10 @@ listNode *combining(listNode *node) {
 
 void bucketSortGEN(int *arr, int n) {
     int *copy = new int[n];
+    std::cout << "Array before: " << std::endl;
+    printArray(n, arr);
     copyOfArray(n, arr, copy);
-    ls = new listNode[max_key];
+    ls = new listNode[max];
     for (int i = 0; i < n; i++) {
         if (ls[copy[i]].key == -1)
             ls[copy[i]].key = copy[i];
@@ -177,6 +182,43 @@ void radixsort(int *arr, int n) {
         countSort(arr, n, exp);
 }
 
+void formArrayToBucketSort(int *&arr, int & n) {
+    std::cout << "Input count of elements for new array: "; n = checkInput();
+    delete[] arr;
+    arr = new int[n];
+    for (int i = 0; i < n; ++i) {
+        arr[i] = i;
+    }
+    int tmp, r;
+    srand(time(0));
+    for (int i = 0; i < n; i++) {
+        r = rand() % n;
+        tmp = arr[i];
+        arr[i] = arr[r];
+        arr[r] = tmp;
+    }
+}
+
+void formArrayToBucketSortGEN(int *&arr, int & n) {
+    std::cout << "Input count of elements for new array: "; n = checkInput();
+    delete[] arr;
+    arr = new int[n];
+    max = n - n / 3;
+    for (int i = 0; i < max; ++i) {
+        arr[i] = i;
+    }
+    for (int i = max; i < n; ++i)
+        arr[i] = rand() % max;
+    int tmp, r;
+    srand(time(0));
+    for (int i = 0; i < n; i++) {
+        r = rand() % n;
+        tmp = arr[i];
+        arr[i] = arr[r];
+        arr[r] = tmp;
+    }
+}
+
 int main() {
     std::string input;
     int *array = nullptr, n;
@@ -206,10 +248,14 @@ int main() {
             printArray(n, copy);
             delete[] copy;
         }
-        else if (input == "3")
+        else if (input == "3") {
+            formArrayToBucketSort(array, n);
             bucketSort(n, array);
-        else if (input == "4")
-            bucketSortGEN(array,n);
+        }
+        else if (input == "4") {
+            formArrayToBucketSortGEN(array, n);
+            bucketSortGEN(array, n);
+        }
         else if (input == "8") printArray(n, array);
         else if (input == "0") {
             delete[] array;

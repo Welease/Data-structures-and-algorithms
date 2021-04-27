@@ -16,8 +16,9 @@ void printReversSym(TreeNode *root, int l) {
     if (root) {
         printReversSym(root->right, l + 1);
         for (int i = 1; i <= l; ++i)
-            std::cout << "     ";
+            std::cout << "    |";
         std::cout << root->key << std::endl;
+        std::cout << "----------------------------------------------------" << std::endl;
         printReversSym(root->left, l + 1);
     }
 }
@@ -46,10 +47,11 @@ int checkInput() {
 
 void findStarting(bool & flag) {
     int key;
-    TreeNode *cur;
+    TreeNode *cur = nullptr;
+    flag = false;
     std::cout <<"Input key: "; key = checkInput();
     find(root, &cur, key, flag);
-    if (cur) std::cout << GREEN << "Found '" << key << "' (" << cur -> counter << ")\n" << DEFAULT;
+    if (flag) std::cout << GREEN << "Found '" << key << "'\n" << DEFAULT;
     else std::cout << RED << "Can't find such element\n" << DEFAULT;
 }
 
@@ -77,36 +79,39 @@ TreeNode *insertRecursive(TreeNode *parent, int key) {
 }
 
 
-void insertIter(int key) {
-    if (!root) {
-        root = new TreeNode;
-        root -> left = root -> right = nullptr;
-        root -> key = key;
-        root -> counter = 0;
+void insertIter(TreeNode *& root, int key) {
+    TreeNode* toinsert = new TreeNode;
+    toinsert -> key = key;
+    toinsert -> left = toinsert -> right = NULL;
+    toinsert -> counter = 0;
+    TreeNode* curr = root;
+    TreeNode* prev = NULL;
+    bool flag = false;
+
+    TreeNode *cur = nullptr;
+    find(root, &cur, key, flag);
+    if (flag) {
+        cur->counter++;
+        return;
     }
-    else {
-        TreeNode *par, *cur = root;
-        while (cur) {
-            par = cur;
-            if (key < cur -> key) cur = cur -> left;
-            else if (key > cur -> key) cur = cur -> right;
-            else { cur = nullptr; cur -> counter++; }
-        }
-        if (key < par -> key) {
-            cur = new TreeNode;
-            cur -> left = cur -> right = nullptr;
-            cur -> counter = 0;
-            cur -> key = key;
-            par -> left = cur;
-        }
-        else if (key > par -> key) {
-            cur = new TreeNode;
-            cur -> left = cur -> right = nullptr;
-            cur -> counter = 0;
-            cur -> key = key;
-            par -> right = cur;
-        }
+
+    while (curr != NULL) {
+        prev = curr;
+        if (key < curr->key)
+            curr = curr->left;
+        else
+            curr = curr->right;
     }
+    if (prev == NULL) {
+        prev = toinsert;
+        root = prev;
+    }
+
+    else if (key < prev->key)
+        prev->left = toinsert;
+
+    else
+        prev->right = toinsert;
 }
 
 void addingNewNode() {
@@ -115,15 +120,15 @@ void addingNewNode() {
     std::cout <<"Input key: "; key = checkInput();
     std::cout << "Insert:\n 1 - recursive\n 2 - iterative\n"; std::cin >> input;
     if (input == "1") root = insertRecursive(root, key);
-    if (input == "2") insertIter(key);
+    if (input == "2") insertIter(root, key);
     std::cout << GREEN << "Element successfully added!"<< DEFAULT << std::endl;
 }
 
-void clear(TreeNode *root) {
-    if (root) {
-        clear(root->left);
-        clear(root->right);
-        delete root;
+void clear(TreeNode *&node) {
+    if (node) {
+        clear(node->left);
+        clear(node->right);
+        delete node;
     }
 }
 
@@ -133,6 +138,7 @@ TreeNode* minValueNode(TreeNode* node) {
         current = current->left;
     return current;
 }
+
 
 TreeNode* erase(TreeNode* parent, int key) {
     if (!parent) return parent;
@@ -166,7 +172,7 @@ int getRandomNumber(int min, int max) {
 
 void formTree(int n) {
     for (int i = 0; i < n; ++i)
-        insertIter(getRandomNumber(0, 100));
+        insertIter(root, getRandomNumber(0, 100));
 }
 
 int main() {
@@ -201,7 +207,7 @@ int main() {
                 std::cout << GREEN << "Element successfully deleted!" << DEFAULT << std::endl;
             } else { std::cout << RED << "Tree is empty:(" << DEFAULT << std::endl;}
         }
-        else if (input == "6") break;
+        else if (input == "0") break;
     }
     clear(root);
     return 0;
