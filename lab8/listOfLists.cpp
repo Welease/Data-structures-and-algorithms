@@ -128,7 +128,7 @@ void pushBeforeToChild(std::string & ch, parentList *tmpPar) {
         tmp -> next = chTmp;
         Pred -> next = tmp;
         std::cout << "Input string: "; std::cin >> input;
-        std::cout << GREEN << "Element successfully added!" << DEFAULT << std::endl; tmp -> value = input;
+        std::cout << GREEN << "value successfully added!" << DEFAULT << std::endl; tmp -> value = input;
     }
     else std::cout << RED << "listNode is empty:(" << DEFAULT << std::endl;
 }
@@ -155,7 +155,7 @@ void pushAfterToChild(parentList *tmpPar) {
         head -> next = tmp;
     }
     std::cout << "Input string: "; std::cin >> input;
-    std::cout << GREEN << "Element successfully added!" << DEFAULT << std::endl; tmp -> value = input;
+    std::cout << GREEN << "value successfully added!" << DEFAULT << std::endl; tmp -> value = input;
 }
 
 void pushToChild(){
@@ -213,7 +213,7 @@ void popFromParent(){
 
         prevParent -> nextParent = curParent -> nextParent;
         delete curParent;
-        std::cout << GREEN << "Element successfully deleted!" << DEFAULT << std::endl;
+        std::cout << GREEN << "value successfully deleted!" << DEFAULT << std::endl;
     }
     else std::cout << RED << "listNode is empty:(" << DEFAULT << std::endl;
 }
@@ -250,7 +250,7 @@ void popFromChildList(){
                 else { std::cout << RED << "Can't find such string:(" << DEFAULT << std::endl; }
             }
             prev -> next = cur -> next;
-            std::cout << GREEN << "Element successfully deleted" << DEFAULT <<std::endl;
+            std::cout << GREEN << "value successfully deleted" << DEFAULT <<std::endl;
             delete cur;
         }
         else std::cout << RED << "listNode is empty:(" << DEFAULT << std::endl;

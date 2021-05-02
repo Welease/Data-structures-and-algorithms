@@ -132,7 +132,7 @@ int main() {
 		    if (flag)
 		        std::cout << found->key << std::endl;
 		    else
-		        std::cout << "Element not found:(" << std::endl;
+		        std::cout << "value not found:(" << std::endl;
 		    flag = false;
 		}
 		else if (input == "4") {

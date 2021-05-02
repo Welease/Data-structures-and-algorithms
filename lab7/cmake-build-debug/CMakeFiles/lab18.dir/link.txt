@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/lab18.dir/home/tanzilya/Data-structures-and-algorithms/lab18/lab18.cpp.o  -o lab18 

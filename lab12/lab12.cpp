@@ -121,7 +121,7 @@ void addingNewNode() {
     std::cout << "Insert:\n 1 - recursive\n 2 - iterative\n"; std::cin >> input;
     if (input == "1") root = insertRecursive(root, key);
     if (input == "2") insertIter(root, key);
-    std::cout << GREEN << "Element successfully added!"<< DEFAULT << std::endl;
+    std::cout << GREEN << "value successfully added!"<< DEFAULT << std::endl;
 }
 
 void clear(TreeNode *&node) {
@@ -204,7 +204,7 @@ int main() {
                 std::cout << "Input key of element to delete: ";
                 key = checkInput();
                 root = erase(root, key);
-                std::cout << GREEN << "Element successfully deleted!" << DEFAULT << std::endl;
+                std::cout << GREEN << "value successfully deleted!" << DEFAULT << std::endl;
             } else { std::cout << RED << "Tree is empty:(" << DEFAULT << std::endl;}
         }
         else if (input == "0") break;

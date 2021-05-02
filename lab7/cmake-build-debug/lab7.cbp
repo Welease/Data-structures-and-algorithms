@@ -27,6 +27,50 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="lab18">
+				<Option output="/home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/lab18" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab18"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lab18/fast">
+				<Option output="/home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/lab18" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab18/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="lab17">
 				<Option output="/home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/lab17" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug"/>
@@ -566,6 +610,9 @@
 		</Unit>
 		<Unit filename="/home/tanzilya/Data-structures-and-algorithms/lab17/lab17.cpp">
 			<Option target="lab17"/>
+		</Unit>
+		<Unit filename="/home/tanzilya/Data-structures-and-algorithms/lab18/lab18.cpp">
+			<Option target="lab18"/>
 		</Unit>
 		<Unit filename="/home/tanzilya/Data-structures-and-algorithms/lab7/ft_list.h">
 			<Option target="lab7"/>

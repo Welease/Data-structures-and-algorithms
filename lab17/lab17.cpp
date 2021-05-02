@@ -81,13 +81,13 @@ void searchElement(std::string str) {
     if (table[code] == "----") std::cout << RED << "Can't find such element\n" << DEFAULT;
     else {
         cmp++;
-        if (table[code] == str) std::cout << GREEN << "Element found \n" << DEFAULT;
+        if (table[code] == str) std::cout << GREEN << "value found \n" << DEFAULT;
         else {
             bool isNotInTable = true;
             for (int i = 0; i < m; i++) {
                 cmp++;
                 if (table[i] == str) {
-                    std::cout << GREEN <<"Element found \n" << DEFAULT;
+                    std::cout << GREEN <<"value found \n" << DEFAULT;
                     isNotInTable = false;
                 }
             }
@@ -107,7 +107,7 @@ int main() {
          "2)Print table\n" <<
          "3)Search keys\n" <<
          "0)exit\n" << DEFAULT ;
-        std::cout << "Keys:\n";
+        std::cout << "keys:\n";
         for (int i = 0; i < 6; i++)
             std::cout << keys[i] << " ";
         std::cout << "\n";

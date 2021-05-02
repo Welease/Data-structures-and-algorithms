@@ -1,4 +1,5 @@
 /home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/CMakeFiles/lab18.dir
 /home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/CMakeFiles/lab17.dir
 /home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/CMakeFiles/lab9.dir
 /home/tanzilya/Data-structures-and-algorithms/lab7/cmake-build-debug/CMakeFiles/lab7.dir

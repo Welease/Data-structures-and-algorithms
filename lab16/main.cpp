@@ -61,7 +61,7 @@ bool insert(std::string _str) {
         code  = codeGenerate(_str);
         if (a[code] != _str) {
             a[code] = _str;
-            std::cout << GREEN << "Element successfully added" << DEFAULT << std::endl;
+            std::cout << GREEN << "value successfully added" << DEFAULT << std::endl;
             return true;
         }
         else
@@ -121,7 +121,7 @@ int main() {
             code = codeGenerate(str);
             if (str == a[code]) {
                 a[code] = "--empty--";
-                std::cout << GREEN << "Element successfully deleted" << DEFAULT << std::endl;
+                std::cout << GREEN << "value successfully deleted" << DEFAULT << std::endl;
                 countOfElements--;
             }
             else
