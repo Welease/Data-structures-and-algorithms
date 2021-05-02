@@ -22,3 +22,5 @@ add_executable(lab14 ../lab14/lab14.cpp)
 add_executable(lab15 ../lab15/lab15.cpp)
 
 add_executable(lab16 ../lab16/main.cpp)
+
+add_executable(lab17 ../lab17/lab17.cpp)

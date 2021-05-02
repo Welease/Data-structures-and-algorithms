@@ -3,7 +3,6 @@
 //
 
 #include <iostream>
-#include <cstdlib>
 # define BLUE "\e[34m"
 # define DEFAULT "\e[39m\e[0m"
 # define GREEN "\e[92m"
@@ -42,7 +41,7 @@ int codeGenerate(std::string _str) {
     for (int i = 0; i < _str.length(); i++) {
         code += (int)_str[i];
     }
-    std::cout << "Code is: " << code << std::endl;
+    std::cout << "getCode is: " << code << std::endl;
     code = code % num;
     std::cout << "Index is: " << code << std::endl;
     return code;

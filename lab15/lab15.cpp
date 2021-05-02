@@ -58,10 +58,10 @@ void bucketSort(int n, int *array) {
     copy = new int[n];
     copyOfArray(n, array, copy);
     int temp; std::string input;
-    std::cout << "Array before: " << std::endl;
+    std::cout << "table before: " << std::endl;
     printArray(n, array);
     std::cout << "Sort with second array? \n 1 - yes, 0 - no\n"; std::cin >> input;
-    std::cout << "Array after: " << std::endl;
+    std::cout << "table after: " << std::endl;
     if (input == "0") {
         for (int i = 0; i < n; i++) {
             while (copy[i] != i) {
@@ -121,7 +121,7 @@ listNode *combining(listNode *node) {
 
 void bucketSortGEN(int *arr, int n) {
     int *copy = new int[n];
-    std::cout << "Array before: " << std::endl;
+    std::cout << "table before: " << std::endl;
     printArray(n, arr);
     copyOfArray(n, arr, copy);
     ls = new listNode[max];
@@ -142,7 +142,7 @@ void bucketSortGEN(int *arr, int n) {
     head = combining(ls);
     copy = toArray(head, n);
     head = nullptr;
-    std::cout << "Array after:\n";
+    std::cout << "table after:\n";
     printArray(n, copy);
     delete [] copy;
     delete [] ls;
@@ -241,10 +241,10 @@ int main() {
         else if (input == "2") {
             int *copy = new int[n];
             copyOfArray(n, array, copy);
-            std::cout << "Array before:\n";
+            std::cout << "table before:\n";
             printArray(n, array);
             radixsort(copy, n);
-            std::cout << "Array after:\n";
+            std::cout << "table after:\n";
             printArray(n, copy);
             delete[] copy;
         }

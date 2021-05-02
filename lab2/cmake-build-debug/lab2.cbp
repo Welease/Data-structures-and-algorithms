@@ -72,7 +72,7 @@
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
+					<addElement directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/tanzilya/Data-structures-and-algorithms/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab2/fast"/>

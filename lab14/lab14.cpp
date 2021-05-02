@@ -108,7 +108,7 @@ int shellSort(int *arr, int n) {
     cmp = 0, chan = 0;
     int *copy = new int[n];
     copyOfArray(n, arr, copy);
-    std::cout << "Array before:\n";
+    std::cout << "table before:\n";
     printArray(n, arr);
     std::cout << GREEN << "Starting sorting by shell sort..." << DEFAULT << std::endl;
     int temp=0, i = 0, j = 0, k = 0;
@@ -133,7 +133,7 @@ int shellSort(int *arr, int n) {
             chan++;
         }
     }
-    std::cout << "Array after:\n";
+    std::cout << "table after:\n";
     printArray(n, copy);
     delete[] copy;
     std::cout << GREEN "Compares: " << cmp << std::endl << "Changes: " << chan << std::endl;
@@ -144,7 +144,7 @@ void bubbleSort(int *arr, int n) {
     int cmp = 0, chan = 0;
     int *copy = new int[n];
     copyOfArray(n, arr, copy);
-    std::cout << "Array before:\n";
+    std::cout << "table before:\n";
     printArray(n, arr);
     std::cout << GREEN << "Starting sorting by bubble sort..." << DEFAULT << std::endl;
     for (int i = 0; i < n - 2; i++)
@@ -155,7 +155,7 @@ void bubbleSort(int *arr, int n) {
                 ++chan;
             }
         }
-    std::cout << "Array after:\n";
+    std::cout << "table after:\n";
     printArray(n, copy);
     delete[] copy;
     std::cout <<GREEN "Compares: " << cmp << std::endl << "Changes: " << chan << std::endl;
@@ -166,7 +166,7 @@ void selectionSort(int *arr, int n) {
     int cmp = 0, chan = 0;
     int *copy = new int[n];
     copyOfArray(n, arr, copy);
-    std::cout << "Array before:\n";
+    std::cout << "table before:\n";
     printArray(n, arr);
     std::cout << GREEN << "Starting sorting by selection sort..." << DEFAULT << std::endl;
 
@@ -184,7 +184,7 @@ void selectionSort(int *arr, int n) {
         copy[i] = min_idx;
         chan++;
     }
-    std::cout << "Array after:\n";
+    std::cout << "table after:\n";
     printArray(n, copy);
     delete[] copy;
     std::cout <<GREEN "Compares: " << cmp << std::endl << "Changes: " << chan << std::endl;
@@ -195,7 +195,7 @@ void insertionSort(int *arr, int n) {
     int cmp = 0, chan = 0;
     int *copy = new int[n];
     copyOfArray(n, arr, copy);
-    std::cout << "Array before:\n";
+    std::cout << "table before:\n";
     printArray(n, arr);
     std::cout << GREEN << "Starting sorting by insertion sort..." << DEFAULT << std::endl;
     for (i = 1; i < n; i++) {
@@ -211,7 +211,7 @@ void insertionSort(int *arr, int n) {
             chan--;
         copy[j+1] = key; chan++;
     }
-    std::cout << "Array after:\n";
+    std::cout << "table after:\n";
     printArray(n, copy);
     delete[] copy;
     std::cout <<GREEN "Compares: " << cmp << std::endl << "Changes: " << chan << std::endl;
@@ -247,10 +247,10 @@ int main() {
             cmp = 0; chan = 0;
             int *copy = new int[n];
             copyOfArray(n, array, copy);
-            std::cout << "Array before:\n";
+            std::cout << "table before:\n";
             printArray(n, array);
             quickSort(copy, 0, n - 1);
-            std::cout << "Array after:\n";
+            std::cout << "table after:\n";
             printArray(n, copy);
             delete[] copy;
             std::cout << GREEN "Compares: " << cmp << std::endl << "Changes: " << chan << std::endl;
@@ -260,10 +260,10 @@ int main() {
             cmp = 0; chan = 0;
             int *copy = new int[n];
             copyOfArray(n, array, copy);
-            std::cout << "Array before:\n";
+            std::cout << "table before:\n";
             printArray(n, array);
             heapSort(copy,n);
-            std::cout << "Array after:\n";
+            std::cout << "table after:\n";
             printArray(n, copy);
             delete[] copy;
             std::cout << GREEN "Compares: " << cmp << std::endl << "Changes: " << chan << std::endl;

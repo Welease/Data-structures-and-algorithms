@@ -87,7 +87,7 @@ void insert(TreeNode **root) {
                 std::cout << "Can't add the element:(" << std::endl;
             else if (!found->left && !found->right) {
                 std::cout << "Input the key:"; std::cin >> key;
-                std::cout << "Add to left or to right? (1 - left, 0 - right)"; std::cin >> place;
+                std::cout << "addElement to left or to right? (1 - left, 0 - right)"; std::cin >> place;
                 place ? found->left = newNode(key) : found->right = newNode(key);
             }
             else if (!found->left) {
