@@ -11,8 +11,8 @@ int main() {
         std::cout << BLUE << "Choose option:\n" <<
         "1 - print parent list's data\n" <<
         "2 - check empty or not parent list\n" <<
-        "3 - push empty child list to parent list\n" <<
-        "4 - push element to child list\n" <<
+        "3 - insert empty child list to parent list\n" <<
+        "4 - insert element to child list\n" <<
         "5 - pop element from parent list\n" <<
         "6 - pop element from child list\n" <<
         "7 - find element with part of information\n" <<

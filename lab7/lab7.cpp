@@ -21,10 +21,10 @@ int main() {
 	ft::list<int> :: iterator i;
 	while (1) {
 		std::cout << BLUE << "Choose option:\n" <<
-				  "1 - push element back\n" <<
-				  "2 - push element front\n" <<
-				  "3 - push element before...\n" <<
-				  "4 - push element after...\n" <<
+				  "1 - insert element back\n" <<
+				  "2 - insert element front\n" <<
+				  "3 - insert element before...\n" <<
+				  "4 - insert element after...\n" <<
 				  "5 - pop element\n" <<
 				  "6 - print all list's data\n" <<
 				  "7 - pop back\n" <<

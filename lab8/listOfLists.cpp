@@ -44,7 +44,7 @@ int pushToParentBefore(std::string & input, int & i, parentList *&tmp, parentLis
         parentList *Pred = parentHead;
         while (i == -1){
             cur = parentHead-> nextParent;
-            std::cout << "Input list before which you want push list: ";std::cin >> input;
+            std::cout << "Input list before which you want insert list: ";std::cin >> input;
             while (cur) {
                 if (cur ->headChildList-> value == input) break;
                 cur = cur -> nextParent;
@@ -66,7 +66,7 @@ int pushToParentAfter(int & i,  parentList *&tmp, parentList *& cur, std::string
     if (!isParentListEmpty()){
         while (i == -1) {
             cur = parentHead->nextParent;
-            std::cout << "Input list after which you want push list: "; std::cin >> input;
+            std::cout << "Input list after which you want insert list: "; std::cin >> input;
             while ((cur) && (cur -> headChildList-> value != input))
                 cur = cur -> nextParent;
             if (cur) i++;
@@ -116,7 +116,7 @@ void pushBeforeToChild(std::string & ch, parentList *tmpPar) {
         i = -1;
         while (i == -1){
             chTmp = head -> next;
-            std::cout << "Input element before which you want push list: ";std::cin >> input;
+            std::cout << "Input element before which you want insert list: ";std::cin >> input;
             while (chTmp) {
                 if (chTmp -> value == input) break;
                 chTmp = chTmp -> next;
@@ -141,7 +141,7 @@ void pushAfterToChild(parentList *tmpPar) {
         i = -1;
         while (i == -1) {
             chTmp = head -> next;
-            std::cout << "Input list after which you want push list: ";std::cin >> input;
+            std::cout << "Input list after which you want insert list: ";std::cin >> input;
             while ((chTmp) && (chTmp -> value != input))
                 chTmp = chTmp -> next;
             if (chTmp) i++;
@@ -165,7 +165,7 @@ void pushToChild(){
         int i = -1;
         while (i == -1) {
             tmpPar = parentHead -> nextParent;
-            std::cout << "Input name of list where you want to push element: ";
+            std::cout << "Input name of list where you want to insert element: ";
             std::cin >> input;
             while ((tmpPar) && (tmpPar -> headChildList -> value != input))
                 tmpPar = tmpPar -> nextParent;

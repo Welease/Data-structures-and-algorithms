@@ -247,6 +247,19 @@ lab14/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab14.dir/build.make CMakeFiles/lab14.dir/build
 .PHONY : lab14/fast
 
+#=============================================================================
+# Target rules for targets named lab16
+
+# Build rule for target.
+lab16: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab16
+.PHONY : lab16
+
+# fast build rule for target.
+lab16/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab16.dir/build.make CMakeFiles/lab16.dir/build
+.PHONY : lab16/fast
+
 home/tanzilya/Data-structures-and-algorithms/lab10/Stack.o: home/tanzilya/Data-structures-and-algorithms/lab10/Stack.cpp.o
 
 .PHONY : home/tanzilya/Data-structures-and-algorithms/lab10/Stack.o
@@ -463,6 +476,33 @@ home/tanzilya/Data-structures-and-algorithms/lab15/lab15.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/home/tanzilya/Data-structures-and-algorithms/lab15/lab15.cpp.s
 .PHONY : home/tanzilya/Data-structures-and-algorithms/lab15/lab15.cpp.s
 
+home/tanzilya/Data-structures-and-algorithms/lab16/main.o: home/tanzilya/Data-structures-and-algorithms/lab16/main.cpp.o
+
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab16/main.o
+
+# target to build an object file
+home/tanzilya/Data-structures-and-algorithms/lab16/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab16.dir/build.make CMakeFiles/lab16.dir/home/tanzilya/Data-structures-and-algorithms/lab16/main.cpp.o
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab16/main.cpp.o
+
+home/tanzilya/Data-structures-and-algorithms/lab16/main.i: home/tanzilya/Data-structures-and-algorithms/lab16/main.cpp.i
+
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab16/main.i
+
+# target to preprocess a source file
+home/tanzilya/Data-structures-and-algorithms/lab16/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab16.dir/build.make CMakeFiles/lab16.dir/home/tanzilya/Data-structures-and-algorithms/lab16/main.cpp.i
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab16/main.cpp.i
+
+home/tanzilya/Data-structures-and-algorithms/lab16/main.s: home/tanzilya/Data-structures-and-algorithms/lab16/main.cpp.s
+
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab16/main.s
+
+# target to generate assembly for a file
+home/tanzilya/Data-structures-and-algorithms/lab16/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab16.dir/build.make CMakeFiles/lab16.dir/home/tanzilya/Data-structures-and-algorithms/lab16/main.cpp.s
+.PHONY : home/tanzilya/Data-structures-and-algorithms/lab16/main.cpp.s
+
 home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.o: home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.cpp.o
 
 .PHONY : home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.o
@@ -585,6 +625,7 @@ help:
 	@echo "... lab13"
 	@echo "... lab14"
 	@echo "... lab15"
+	@echo "... lab16"
 	@echo "... lab7"
 	@echo "... lab8"
 	@echo "... lab9"
@@ -612,6 +653,9 @@ help:
 	@echo "... home/tanzilya/Data-structures-and-algorithms/lab15/lab15.o"
 	@echo "... home/tanzilya/Data-structures-and-algorithms/lab15/lab15.i"
 	@echo "... home/tanzilya/Data-structures-and-algorithms/lab15/lab15.s"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab16/main.o"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab16/main.i"
+	@echo "... home/tanzilya/Data-structures-and-algorithms/lab16/main.s"
 	@echo "... home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.o"
 	@echo "... home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.i"
 	@echo "... home/tanzilya/Data-structures-and-algorithms/lab8/listOfLists.s"
