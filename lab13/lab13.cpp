@@ -69,7 +69,7 @@ void bubbleSort(int *arr, int n) {
 }
 
 void selectionSort(int *arr, int n) {
-    int i, j, min_idx, k = 0;
+    int i, j, min_idx;
     int cmp = 0, chan = 0;
     int *copy = new int[n];
     copyOfArray(n, arr, copy);
@@ -77,19 +77,20 @@ void selectionSort(int *arr, int n) {
     printArray(n, arr);
     std::cout << GREEN << "Starting sorting by selection sort..." << DEFAULT << std::endl;
 
-    for (i=0; i < n; i++) {
-        k = i; min_idx = copy[i];
+    for (i=0; i < n - 1; i++) {
+       min_idx = i;
         for (j = i+1; j < n; j++) {
-            if (copy[j] < min_idx) {
-                k = j; min_idx = copy[j];
+            if (copy[j] < copy[min_idx]) {
+                min_idx = j;
             }
             cmp++;
         }
-        if (copy[i] == min_idx)
-            chan--;
-        copy[k] = copy[i];
-        copy[i] = min_idx;
-        chan++;
+        if (min_idx != i) {
+            int tmp = copy[i];
+            copy[i] = copy[min_idx];
+            copy[min_idx] = tmp;
+            chan++;
+        }
     }
     std::cout << "table after:\n";
     printArray(n, copy);

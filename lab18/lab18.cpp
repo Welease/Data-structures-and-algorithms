@@ -10,7 +10,7 @@
 
 int m = 11, cmp = 0;
 
-std::string keys[] = {"Petrov", "Ivanov", "Rahimov", "Nikitin", "Polin", "Akimov", "Olegov", "Salikov"};
+//std::string keys[] = {"Petrov", "Ivanov", "Rahimov", "Nikitin", "Polin", "Akimov", "Olegov", "Salikov"};
 
 struct Hash{
     Hash* next = nullptr;
@@ -23,17 +23,6 @@ void initTab() {
     List = new Hash[m];
 }
 
-bool isInKeys(std::string key) {
-    bool ret = false;
-    for (int i = 0; i < 8; i++) {
-        if (key == keys[i]) {
-            ret = true;
-            break;
-        }
-    }
-    return ret;
-}
-
 int getCode(std::string key) {
     int code = 0;
     for (int i = 0; i < key.length(); i++)
@@ -42,11 +31,46 @@ int getCode(std::string key) {
     return code;
 }
 
+bool search(std::string & str, bool print) {
+    int tmp = getCode(str);
+    cmp++;
+    if (List[tmp].value == str) {
+        if (print)
+            std::cout << GREEN << "Element is in " << tmp + 1 << " box\n" << DEFAULT;
+        return true;
+    }
+    else if (List[tmp].next) {
+        Hash* Current = List[tmp].next;
+        int i = 0;
+        while (Current) {
+            cmp++;
+            if (Current->value == str) {
+                if (print)
+                    std::cout << GREEN << "Element is in " << tmp + 1 << " box in " << i + 1 << " position\n" << DEFAULT;
+                return true;
+            }
+            Current = Current->next;
+            i++;
+        }
+    }
+    else {
+        if (print)
+            std::cout << RED << "Can't find such key" << DEFAULT << std::endl;
+    }
+    if (print) {
+        std::cout << "Count of compares: " << cmp << "\n";
+    }
+    cmp = 0;
+    return false;
+}
 
-void insert(std::string str) {
+void insert(std::string & str) {
     int code;
-    if (isInKeys(str)) {
         code = getCode(str);
+        if (search(str, false)) {
+            std::cout << RED << "Key in table" << DEFAULT << std::endl;
+            return ;
+        }
         cmp++;
         if (List[code].value == "----") {
             List[code].value = str;
@@ -68,7 +92,6 @@ void insert(std::string str) {
                 }
             }
         }
-    } else std::cout << RED << "Can't add such element" << DEFAULT << std::endl;
     std::cout << "Count of compares: " << cmp << "\n";
     cmp = 0;
 }
@@ -86,30 +109,6 @@ void printTable() {
         std::cout << "\n";
     }
     std::cout << "\n";
-}
-
-void search(std::string & str) {
-    int tmp = getCode(str);
-    cmp++;
-    if (List[tmp].value == str)
-        std::cout << GREEN << "Element is in " << tmp + 1 << " box\n" << DEFAULT;
-    else if (List[tmp].next) {
-        Hash* Current = List[tmp].next;
-        int i = 0;
-        while (Current) {
-            cmp++;
-            if (Current->value == str) {
-                std::cout << GREEN << "Element is in " << tmp + 1 << " box in " << i + 1 << " position\n" << DEFAULT;
-                break;
-            }
-            Current = Current->next;
-            i++;
-        }
-    }
-    else std::cout << RED << "Can't find such key" << DEFAULT << std::endl;
-
-    std::cout << "Count of compares: " << cmp << "\n";
-    cmp = 0;
 }
 
 void erase(std::string & str) {
@@ -157,11 +156,7 @@ int main() {
         "2)Print table\n" <<
         "3)Search element\n" <<
         "4)Delete element\n" <<
-        "0)Exit\n" <<
-        "Keys:\n" << DEFAULT;
-        for (int i = 0; i < 8; i++)
-            std::cout << keys[i] << " ";
-        std::cout << "\n";
+        "0)Exit\n"  << DEFAULT << std::endl;
 
         std::cout << "====>"; std::cin >> input;
         if (input == "1") {
@@ -171,7 +166,7 @@ int main() {
         else if (input == "2") printTable();
         else if (input == "3") {
             std::cout << "Input string:\n"; std::cin >> str;
-            search(str);
+            search(str, true);
         }
         else if (input == "4") {
             std::cout << "Input string:\n"; std::cin >> str;

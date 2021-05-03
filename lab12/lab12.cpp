@@ -145,7 +145,7 @@ TreeNode* erase(TreeNode* parent, int key) {
     if (key < parent->key) parent->left = erase(parent->left, key);
     else if (key > parent->key) parent->right = erase(parent->right, key);
     else {
-        if (parent->counter > 0) parent->counter--;
+        if (parent->counter > 1) parent->counter--;
         else {
             if (!parent->left and !parent->right) return nullptr;
             else if (!parent->left) {
@@ -159,6 +159,8 @@ TreeNode* erase(TreeNode* parent, int key) {
             }
             TreeNode *temp = minValueNode(parent->right);
             parent->key = temp->key;
+            parent->counter = temp->counter;
+            temp->counter = 1;
             parent->right = erase(parent->right, temp->key);
         }
     }

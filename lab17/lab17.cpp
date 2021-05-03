@@ -8,10 +8,10 @@
 # define GREEN "\e[92m"
 # define RED  "\e[31m"
 
-int m = 17, cmp = 0;
+int m = 10, cmp = 0;
 std::string* table = new std::string[m];
 
-std::string keys[] = {"Petrov", "Ivanov", "Rahimov", "Nikitin", "Polin", "Akimov" };
+std::string keys[] = {"Petrov", "Ivanov", "Rahimov", "Nikitin", "Polin", "123" };
 
 void fillEmptyArray() {
     for (int i = 0; i < m; i++) {
@@ -41,8 +41,9 @@ int getCode(std::string key) {
 
 void addElement(std::string str) {
     int code;
-    if (isKeyInTable(str)) {
+//    if (isKeyInTable(str)) {
         code = getCode(str);
+        std::cout << "code is: " << code << std::endl;
         cmp++;
         if (table[code] == "----") {
             table[code] = str;
@@ -54,6 +55,10 @@ void addElement(std::string str) {
                 int j, i;
                 for (i = 1; i < m; i++) {
                     j = (code + i) % m;
+                    if (table[j] == str) {
+                        std::cout << RED << "Key is in table" << DEFAULT << std::endl;
+                        break;
+                    }
                     cmp++;
                     if (table[j] == "----") {
                         table[j] = str;
@@ -61,9 +66,11 @@ void addElement(std::string str) {
                         break;
                     }
                 }
+            } else {
+                std::cout << RED << "Key is in table" << DEFAULT << std::endl;
             }
         }
-    } else std::cout << RED << "Can't add such element" << DEFAULT << std::endl;
+//    } else std::cout << RED << "Can't add such element" << DEFAULT << std::endl;
     std::cout << "Count of compares: " << cmp << "\n";
     cmp = 0;
 }
@@ -107,9 +114,6 @@ int main() {
          "2)Print table\n" <<
          "3)Search keys\n" <<
          "0)exit\n" << DEFAULT ;
-        std::cout << "keys:\n";
-        for (int i = 0; i < 6; i++)
-            std::cout << keys[i] << " ";
         std::cout << "\n";
         std::cout << "====>";
         std::cin >> input;
